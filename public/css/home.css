@@ -1,0 +1,104 @@
+.product-list-kind{
+    background: #dfdfdf;
+    padding: 15px;
+    height: 100%;
+}
+.product-list-kind .product-list-kind-header{
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+}
+.product-list-kind .product-list-kind-item{
+    border-bottom: 1px solid;
+    padding-bottom: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+.product-list{
+    margin-top: 20px;
+}
+.prodict-list-item .prodict-list-item-box{
+    height: 200px;
+    width: 100%;
+}
+.prodict-list-item .prodict-list-item-box .box-img{
+    height: 150px;
+    overflow: hidden;
+    width: 100%;
+}
+.prodict-list-item .prodict-list-item-box .box-img img{
+    width: 100%;
+    height: 150px;
+}
+.prodict-list-item .prodict-list-item-box .box-info{
+    height: 50px;
+}
+.prodict-list-item .prodict-list-item-box .box-info div{
+
+    width: 100%;
+    text-align: center;
+}
+.news{
+    background: #c8ad5b;
+}
+.news .title{
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 30px;
+}
+.intro .title{
+    color: #c8ad5b;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 30px;
+}
+.intro .contact::before{
+    content: '';
+    display: block;
+    border: 1px solid;
+    margin: 20px auto;
+    max-width: 300px;
+}
+.intro .contact div{
+    font-size: 30px;
+    font-weight: 500;
+}
+.intro2{
+    background: #dfdfdf;
+    padding: 20px;
+    text-align: center;
+    color: #bb0000;
+}
+.intro2 .text{
+    font-size: 18px;
+    width: 100px;
+    display: inline-block;
+    text-align: left;
+    margin-left: 10px;
+}
+.intro2 .col{
+    border-right: 1px solid #bb0000;
+}
+.intro2 .col:last-child{
+    border: unset;
+}
+.footer{
+    background: #333;
+    padding: 20px;
+    color: #fff;
+}
+.footer .footer-intro .title{
+    font-size: 30px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+.footer .footer-intro .content{
+    max-width: 350px;
+    text-align: center;
+    margin: auto;
+    line-height: 2;
+}
+.footer .footer-intro-icon{
+    color: #c8ad5b;
+}

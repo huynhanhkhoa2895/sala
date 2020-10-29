@@ -108,7 +108,7 @@ class Wedding_invitationCrudController extends CrudController
             [
                 'name' => 'image',
                 'type' => 'image',
-                'prefix' => 'img/',
+                'prefix' => 'img/product/',
             ],
             
         );

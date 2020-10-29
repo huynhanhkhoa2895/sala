@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+}
+.container-fluid{
+    padding: 10px 0 0 0;
+}
+.row{
+    margin: 0;
+    padding: 0;
+}
+.pd0{
+    padding: 0;
+}
+.pdl0{
+    padding-left: 0;
+}
+.pdr0{
+    padding-right: 0;
+}
+.mg0{
+    margin: 0;
+}
+.bg-main{
+    background: #c8ad5b;
+}
+.color-w{
+    color: #ffffff;
+}
+.form-control:focus{
+    box-shadow: unset;
+    border-color: #ced4da;
+}
+a,a:focus,a:hover{
+    color: #333333;
+}
+a:hover{
+    text-decoration: unset;
+}
