@@ -32,9 +32,9 @@
                 <div class="product-list">
                     <div class="product-list-filter">
                         <div class="row" style="margin-bottom: 20px">
-                            <div class="col-md-4 ">
+                            <div class="col">
                                 <div class="row">
-                                    <div class="col pdl0">
+                                    <div class="col">
                                         <select class="form-control">
                                             <option value="0">Chọn màu</option>
                                             @foreach ($color as $item)
@@ -44,11 +44,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col pdl0">
+                            <div class="col">
                                 <div class="row">
-                                    <div class="col-md-4 pdl0">
+                                    <div class="col">
                                         <select class="form-control">
-                                            <option value="0">Chọn kiểu</option>
                                             @foreach ($style as $item)
                                                 <option value="{{$item->id}}">{{$item->content}}</option>
                                             @endforeach

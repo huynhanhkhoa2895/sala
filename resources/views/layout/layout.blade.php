@@ -11,17 +11,17 @@
     @yield('css')
 </head>
 <body>
-    <header>
-        @include('layout.head')
-    </header>
-    <main>
-        <div class="container-fluid">
+    <section class="container-fluid">
+        <header>
+            @include('layout.head')
+        </header>
+        <main>
             @yield('content')
-        </div>
-    </main>
-    <footer>
-        @include('layout.footer')
-    </footer>
+        </main>
+        <footer>
+            @include('layout.footer')
+        </footer>
+    </section>
     @include("layout.script")
 </body>
 
