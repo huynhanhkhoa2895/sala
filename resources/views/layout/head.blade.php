@@ -12,22 +12,22 @@
                 </div>
                 <div class="col-lg-8 col-md-7">
                     <div class="header-box-info">
-                        <div class="row" style="margin-top: 10px">
-                            <div class="col-md-6 col-6">
+                        <div class="row justify-content-end" style="margin-top: 10px">
+                            <div class="col-md-3 col-3 text-right">
                                 <div class="icon">
                                     <span class="fas fa-phone"></span>
                                 </div>
                                 <div class="icon-content">Liên hệ ngay</div>
                             </div>
-                            <div class="col-md-6 col-6">
+                            <div class="col-md-3 col-3 text-right">
                                 <div class="icon">
                                     <span class="fas fa-shopping-cart"></span>
                                 </div>
                                 <div class="icon-content">Giỏ hàng</div>
                             </div>
                         </div>
-                        <div class="row" style="margin-top: 20px">
-                            <div class="col-md-12">
+                        <div class="row justify-content-end" style="margin-top: 20px">
+                            <div class="col-md-4 col-3 text-right">
                                 <div class="input-group mb-3 input-group-search">
                                     <input type="text" class="form-control" placeholder="Tìm kiếm" aria-label="Recipient's username" aria-describedby="basic-addon2">
                                     <div class="input-group-append">
