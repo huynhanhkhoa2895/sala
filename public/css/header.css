@@ -26,6 +26,7 @@
     margin: auto;
     text-align: center;
     font-size: 11px;
+    padding-top: 5px;
 }
 .header .header-box-info .icon-content{
     display: inline-block;
