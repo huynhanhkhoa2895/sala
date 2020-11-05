@@ -19,7 +19,10 @@ class CreateWeddingInvitationTable extends Migration
             $table->unsignedBigInteger("style")->nullable();
             $table->unsignedBigInteger("kind");
             $table->string("code");
+            $table->string("name");
+            $table->string("slug");
             $table->string("image");
+            $table->decimal("price",12,0);
             $table->foreign('color')->references('id')->on('color');
             $table->foreign('style')->references('id')->on('style');
             $table->foreign('kind')->references('id')->on('kind');

@@ -25,6 +25,7 @@
     height: 150px;
     overflow: hidden;
     width: 100%;
+    cursor: pointer;
 }
 .prodict-list-item .prodict-list-item-box .box-img img{
     width: 100%;
@@ -34,9 +35,13 @@
     height: 50px;
 }
 .prodict-list-item .prodict-list-item-box .box-info div{
-
     width: 100%;
     text-align: center;
+}
+.prodict-list-item .product-name{
+    font-size: 18px;
+    font-weight: 700;
+    color: #c8ad5b;
 }
 .news{
     background: #c8ad5b;

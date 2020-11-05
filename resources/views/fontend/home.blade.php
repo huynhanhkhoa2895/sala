@@ -63,11 +63,13 @@
                                 <div class="col-lg-3 col-md-4 col-sm-6 col">
                                     <div class="prodict-list-item-box">
                                         <div class="box-img">
-                                            <img src="{{asset("img/product/".$item->image)}}" alt="{{$item->content}}" />
+                                        <a href="{{url("thiep/".$item->slug)}}">
+                                                <img src="{{asset("img/product/".$item->image)}}" alt="{{$item->content}}" />
+                                            </a>
                                         </div>
                                         <div class="box-info">
-                                            <div>{{$item->code}}</div>
-                                            {{-- <div>$item->price</div> --}}
+                                            <div class="product-name">{{$item->name}}</div>
+                                            <div class="product-price">{{number_format($item->price)}} VND</div>
                                         </div>
                                     </div>
                                 </div>

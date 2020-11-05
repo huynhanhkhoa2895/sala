@@ -1,7 +1,9 @@
 <div class="header">
     <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-10">
+        <div class="col-md-2 col-xs-3 text-center">
+            <img src="{{asset("logo.png")}}" width="150px">
+        </div>
+        <div class="col-md-10 col-xs-9">
             <div class="row">
                 <div class="col-lg-4 col-md-5">
                     <div class="header-box">
@@ -41,7 +43,7 @@
             </div>
             <div class="row" style="margin: 15px 0 15px 0;">
                 <div class="col-12">
-                    <h3>THÀNH CÔNG CỦA BẠN, HẠNH PHÚC CỦA CHÚNG TÔI</h3>
+                    <h3 style="font-family: 'Dancing Script', cursive;letter-spacing: 0.1rem;color: #c8ad5b">THÀNH CÔNG CỦA BẠN, HẠNH PHÚC CỦA CHÚNG TÔI</h3>
                 </div>
             </div>
         </div>
