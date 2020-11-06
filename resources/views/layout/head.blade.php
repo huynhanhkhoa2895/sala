@@ -29,7 +29,7 @@
                             </div>
                         </div>
                         <div class="row justify-content-end" style="margin-top: 20px">
-                            <div class="col-md-4 col-3 text-right">
+                            <div class="col-md-6 col-6 text-right">
                                 <div class="input-group mb-3 input-group-search">
                                     <input type="text" class="form-control" placeholder="Tìm kiếm" aria-label="Recipient's username" aria-describedby="basic-addon2">
                                     <div class="input-group-append">
