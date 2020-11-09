@@ -118,7 +118,7 @@
                 <div class="contact text-center">
                     <div>Nhập email hoặc số điện thoại để được tư vấn ngay</div>
                     <div style="margin: 10px auto;max-width: 500px" class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <input type="text" class="form-control sala-input" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
                         <div class="input-group-append">
                             <span class="input-group-text bg-main" id="basic-addon2"><span class="fas fa-share color-w"></span></span>
                         </div>

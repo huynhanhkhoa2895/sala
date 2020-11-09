@@ -31,7 +31,7 @@
                         <div class="row justify-content-end" style="margin-top: 20px">
                             <div class="col-md-4 col-3 text-right">
                                 <div class="input-group mb-3 input-group-search">
-                                    <input type="text" class="form-control" placeholder="Tìm kiếm" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <input type="text" class="form-control sala-input" placeholder="Tìm kiếm" aria-label="Recipient's username" aria-describedby="basic-addon2">
                                     <div class="input-group-append">
                                         <span class="input-group-text bg-main" id="basic-addon2"><span class="fas fa-search color-w"></span></span>
                                     </div>

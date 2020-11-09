@@ -41,3 +41,10 @@ a,a:focus,a:hover{
 a:hover{
     text-decoration: unset;
 }
+input.sala-input{
+    background: #eee;
+    border: #eee
+}
+input.sala-input:focus{
+    border: 1px solid #eee
+}
