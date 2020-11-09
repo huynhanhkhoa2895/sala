@@ -70,6 +70,9 @@
                                         <div class="box-info">
                                             <div class="product-name">{{$item->name}}</div>
                                             <div class="product-price">{{number_format($item->price)}} VND</div>
+                                            <div class="product-cart">
+                                                <a href="{{url("thiep/".$item->slug)}}"><span class="fas fa-shopping-cart"></span>Mua hàng</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
