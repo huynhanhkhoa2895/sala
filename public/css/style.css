@@ -41,9 +41,27 @@ a,a:focus,a:hover{
 a:hover{
     text-decoration: unset;
 }
-input.sala-input{
+ul>li{
+    text-decoration: none;
+    list-style: none;
+}
+.sala-input{
     background: #eee;
     border: #eee
+}
+.icon-filter{
+    background: #333333;
+    color: #ffffff;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border-radius: 100%;
+    margin: auto;
+    cursor: pointer;
+}
+.icon-filter .fas{
+
 }
 input.sala-input:focus{
     border: 1px solid #eee

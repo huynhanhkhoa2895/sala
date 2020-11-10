@@ -15,25 +15,29 @@
                 <div class="col-lg-8 col-md-7">
                     <div class="header-box-info">
                         <div class="row justify-content-end" style="margin-top: 10px">
-                            <div class="col-md-3 col-3 text-right">
-                                <div class="icon">
-                                    <span class="fas fa-phone"></span>
-                                </div>
-                                <div class="icon-content">Liên hệ ngay</div>
-                            </div>
-                            <div class="col-md-3 col-3 text-right">
-                                <div class="icon">
-                                    <span class="fas fa-shopping-cart"></span>
-                                </div>
-                                <div class="icon-content">Giỏ hàng</div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-end" style="margin-top: 20px">
                             <div class="col-md-6 col-6 text-right">
-                                <div class="input-group mb-3 input-group-search">
-                                    <input type="text" class="form-control sala-input" placeholder="Tìm kiếm" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                    <div class="input-group-append">
-                                        <span class="input-group-text bg-main" id="basic-addon2"><span class="fas fa-search color-w"></span></span>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="icon">
+                                            <span class="fas fa-shopping-cart"></span>
+                                        </div>
+                                        <div class="icon-content">Giỏ hàng</div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="icon">
+                                            <span class="fas fa-shopping-cart"></span>
+                                        </div>
+                                        <div class="icon-content">Giỏ hàng</div>
+                                    </div>
+                                </div>
+                                <div class="row" style="padding-top: 10px">
+                                    <div class="col-12">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control sala-input" placeholder="Tìm kiếm" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text bg-main" id="basic-addon2"><span class="fas fa-search color-w"></span></span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -43,7 +47,7 @@
             </div>
             <div class="row" style="margin: 15px 0 15px 0;">
                 <div class="col-12">
-                    <h3 style="font-family: 'Dancing Script', cursive;letter-spacing: 0.1rem;color: #c8ad5b">THÀNH CÔNG CỦA BẠN, HẠNH PHÚC CỦA CHÚNG TÔI</h3>
+                    <h3>THÀNH CÔNG CỦA BẠN, HẠNH PHÚC CỦA CHÚNG TÔI</h3>
                 </div>
             </div>
         </div>

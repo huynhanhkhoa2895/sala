@@ -35,7 +35,7 @@
                             <div class="col">
                                 <div class="row">
                                     <div class="col">
-                                        <select class="form-control">
+                                        <select class="form-control sala-input">
                                             <option value="0">Chọn màu</option>
                                             @foreach ($color as $item)
                                                 <option value="{{$item->id}}">{{$item->content}}</option>
@@ -47,11 +47,20 @@
                             <div class="col">
                                 <div class="row">
                                     <div class="col">
-                                        <select class="form-control">
+                                        <select class="form-control sala-input">
                                             @foreach ($style as $item)
                                                 <option value="{{$item->id}}">{{$item->content}}</option>
                                             @endforeach
                                         </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="icon-filter">
+                                            <span class="fas fa-filter 2x"></span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

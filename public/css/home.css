@@ -10,9 +10,10 @@
 }
 .product-list-kind .product-list-kind-item{
     border-bottom: 1px solid;
-    padding-bottom: 15px;
-    font-size: 18px;
+    padding: 30px;
+    font-size: 24px;
     text-align: center;
+    font-weight: 500;
 }
 .product-list{
     margin-top: 20px;
@@ -116,4 +117,34 @@
 }
 .footer .footer-intro-icon{
     color: #c8ad5b;
+}
+.footer .list-link{
+    text-align: right;
+}
+.footer .list-link .title{
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+.footer .list-link .title::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20%;
+    top: 40px;
+    right: 5px;
+    border: 1px solid;
+}
+.footer .list-link a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
+.footer .list-link .list-item li:hover a,.footer .list-link .list-item li:hover svg{
+    color: #c8ad5b;
+}
+.footer .list-link .list-item{
+    margin-top: 10px;
 }

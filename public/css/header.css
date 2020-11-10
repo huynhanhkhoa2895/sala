@@ -19,7 +19,7 @@
 .header .header-box-info .icon{
     display: inline-block;
     color: #ffffff;
-    background: #c8ad5b;
+    background: #333;
     height: 25px;
     width: 25px;
     border-radius: 100%;
@@ -28,6 +28,10 @@
     font-size: 11px;
     padding-top: 5px;
 }
+.header .header-box-info .icon:hover{
+    background: #c8ad5b;
+}
+
 .header .header-box-info .icon-content{
     display: inline-block;
     font-weight: 600;
