@@ -10,27 +10,38 @@
                 </div>
                 <div class="footer-intro-icon">
                     <div class="row" style="margin: auto;max-width: 70%">
-                        <div class="col-md-4">
-                            <span class="fas fa-home fa-2x"></span>
-                            <span>79 Đông Hưng Thuận 05, P.Tân Hưng Thuận, Q12, TP.HCM</span>
+                        <div class="footer-intro-icon-item">
+                            <div style="float: left;margin-right: 10px">
+                                <span class="fas fa-home fa-2x"></span>
+                            </div>
+                            <div class="text-left" style="float: left;margin-right: 10px">
+                                <div>79 Đông Hưng Thuận 05, P.Tân Hưng</div>
+                                <div>Thuận, Q12, TP.HCM</div>
+                            </div>
+                            <div style="clear: both"></div>
                         </div>
-                        <div class="col-md-4">
-                            <span class="fas fa-phone fa-2x"></span>
-                            <span>0333.135.735</span>
-                            {{-- <span>0333.135.735</span> --}}
+                        <div class="footer-intro-icon-item">
+                            <div style="float: left;margin-right: 10px">
+                                <span class="fas fa-phone fa-2x"></span>
+                            </div>
+                            <div class="text-left" style="float: left;margin-right: 10px">
+                                <div>0333.135.735</div>
+                                <div>090700008</div>
+                            </div>
+                            <div style="clear: both"></div>
                         </div>
-                        <div class="col-md-4">
-                            <span class="fas fa-envelope fa-2x"></span>
-                            <span>THIEPCUOISALA123@GMAIL.COM</span>
-                        </div>
+                    </div>
+                    <div class="footer-intro-icon-item">
+                        <span class="fas fa-envelope fa-2x"></span>
+                        <span>THIEPCUOISALA123@GMAIL.COM</span>
                     </div>
                 </div>
                 <div class="footer-map">
-                    <div class="row">
-                        <div class="col-12 col-md-6">
+                    <div class="row" style="max-width: 80%;margin: auto;">
+                        <div class="col-12 col-md-7">
                             <img src="{{asset('google-map.png')}}" width="100%" />
                         </div>
-                        <div class="col-12 col-md-6">
+                        <div class="col-12 col-md-5">
                             <div class="list-link">
                                 <div class="title">
                                     Dịch vụ hỗ trợ

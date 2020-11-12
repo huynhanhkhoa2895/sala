@@ -5,25 +5,25 @@
         </div>
         <div class="col-md-10 col-xs-9">
             <div class="row">
-                <div class="col-lg-4 col-md-5">
+                <div class="col-md-7">
                     <div class="header-box">
-                        <div class="name-company">Công ty TNHH NOVAon</div>
-                        <div class="info">169/21 Phan Huy Ích, P,15, Q.Tân Bình</div>
-                        <div class="info">MST: 09697669754</div>
+                        <div class="name-company">CÔNG TY TNHH IN BAO BÌ SALA THIỆP CƯỚI SALA</div>
+                        <div class="info">79 Đông Hưng Thuận 05, Phường Tân Hưng Thuận, Quận 12, Tp.HCM</div>
+                        <div class="info">0333.135.735 - 0907.000.008 (có gửi ben Zalo)</div>
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-7">
+                <div class="col-md-5">
                     <div class="header-box-info">
                         <div class="row justify-content-end" style="margin-top: 10px">
-                            <div class="col-md-6 col-6 text-right">
-                                <div class="row">
-                                    <div class="col-6">
+                            <div class="col">
+                                <div class="wrapper-search">
+                                    <div class="wrapper-icon">
                                         <div class="icon">
-                                            <span class="fas fa-shopping-cart"></span>
+                                            <span class="fas fa-phone"></span>
                                         </div>
-                                        <div class="icon-content">Giỏ hàng</div>
+                                        <div class="icon-content">Điện thoại</div>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="wrapper-icon">
                                         <div class="icon">
                                             <span class="fas fa-shopping-cart"></span>
                                         </div>
@@ -31,7 +31,7 @@
                                     </div>
                                 </div>
                                 <div class="row" style="padding-top: 10px">
-                                    <div class="col-12">
+                                    <div class="col-12 pd0">
                                         <div class="input-group mb-3">
                                             <input type="text" class="form-control sala-input" placeholder="Tìm kiếm" aria-label="Recipient's username" aria-describedby="basic-addon2">
                                             <div class="input-group-append">
@@ -47,7 +47,7 @@
             </div>
             <div class="row" style="margin: 15px 0 15px 0;">
                 <div class="col-12">
-                    <h3>THÀNH CÔNG CỦA BẠN, HẠNH PHÚC CỦA CHÚNG TÔI</h3>
+                    <h3>THIỆP CƯỚI ĐẸP - GIÁ RẺ - CHẤT LƯỢNG</h3>
                 </div>
             </div>
         </div>

@@ -48,6 +48,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <select class="form-control sala-input">
+                                            <option value="0">Chọn kiểu</option>
                                             @foreach ($style as $item)
                                                 <option value="{{$item->id}}">{{$item->content}}</option>
                                             @endforeach
@@ -58,35 +59,33 @@
                             <div class="col">
                                 <div class="row">
                                     <div class="col">
-                                        <div class="icon-filter">
-                                            <span class="fas fa-filter 2x"></span>
-                                        </div>
+                                        <select class="form-control sala-input">
+                                            <option value="0">Chọn giá</option>
+                                            <option value="asc">Thấp tới cao</option>
+                                            <option value="desc">Cao tới thấp</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="prodict-list-item">
-                        <div class="row">
-                            @foreach ($product as $item)
-                                <div class="col-lg-3 col-md-4 col-sm-6 col">
-                                    <div class="prodict-list-item-box">
-                                        <div class="box-img">
-                                        <a href="{{url("thiep/".$item->slug)}}">
-                                                <img src="{{asset("img/product/".$item->image)}}" alt="{{$item->content}}" />
-                                            </a>
-                                        </div>
-                                        <div class="box-info">
-                                            <div class="product-name">{{$item->name}}</div>
-                                            <div class="product-price">{{number_format($item->price)}} VND</div>
-                                            <div class="product-cart">
-                                                <a href="{{url("thiep/".$item->slug)}}"><span class="fas fa-shopping-cart"></span>Mua hàng</a>
-                                            </div>
-                                        </div>
+                        @foreach ($product as $item)
+                            <div class="prodict-list-item-box">
+                                <div class="box-img">
+                                <a href="{{url("thiep/".$item->slug)}}">
+                                        <img src="{{asset("img/product/".$item->image)}}" alt="{{$item->content}}" />
+                                    </a>
+                                </div>
+                                <div class="box-info">
+                                    <div class="product-name">{{$item->name}}</div>
+                                    <div class="product-price">{{number_format($item->price)}} VND</div>
+                                    <div class="product-cart">
+                                        <a href="{{url("thiep/".$item->slug)}}"><span class="fas fa-shopping-cart"></span>Mua hàng</a>
                                     </div>
                                 </div>
-                            @endforeach
-                        </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -116,7 +115,7 @@
     <div class="intro">
         <div class="row">
             <div class="col-md-12">
-                <div class="title text-center">
+                <div class="title text-center" style="font-family: mtd">
                     Xin Chào
                 </div>
                 <div class="content text-center">
@@ -129,10 +128,15 @@
                 </div>
                 <div class="contact text-center">
                     <div>Nhập email hoặc số điện thoại để được tư vấn ngay</div>
-                    <div style="margin: 10px auto;max-width: 500px" class="input-group mb-3">
-                        <input type="text" class="form-control sala-input" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                            <span class="input-group-text bg-main" id="basic-addon2"><span class="fas fa-share color-w"></span></span>
+                    <div class="send-success">
+                        <div style="margin: 10px auto;max-width: 500px" class="input-group mb-3">
+                            <input type="text" class="form-control sala-input" placeholder="Email hoặc số đt" aria-label="Email hoặc số đt" aria-describedby="basic-addon2">
+                            <div class="input-group-append" onclick="handleClickSendEmailContact()">
+                                <span class="input-group-text bg-main" id="basic-addon2"><span class="fas fa-share color-w"></span></span>
+                            </div>
+                        </div>
+                        <div style="display : none" class="send-success-message">
+                            <span>Chúng tôi sẽ sẽ liên lạc sớm với bạn</span>
                         </div>
                     </div>
                 </div>

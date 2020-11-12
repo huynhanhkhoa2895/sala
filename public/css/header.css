@@ -4,10 +4,11 @@
     padding: 10px;
     border-radius: 10px;
     text-align: center;
-    max-width: 350px;
 }
-.header .header-box-info .input-group-search{
-    /* max-width: 600px; */
+.wrapper-search::after{
+    content: '';
+    display: block;
+    clear: both;
 }
 .header .header-box .name-company{
     font-size: 24px;
@@ -16,10 +17,20 @@
 .header .header-box .info{
     font-size: 16px;
 }
+.header .header-box-info .wrapper-icon{
+    display: block;
+    float: left;
+    position: relative;
+    width: 50%;
+    height: 25px;
+}
+
 .header .header-box-info .icon{
+    position: absolute;
+    left: 0;
     display: inline-block;
     color: #ffffff;
-    background: #333;
+    background: #c8ad5b;
     height: 25px;
     width: 25px;
     border-radius: 100%;
@@ -27,14 +38,27 @@
     text-align: center;
     font-size: 11px;
     padding-top: 5px;
-}
-.header .header-box-info .icon:hover{
-    background: #c8ad5b;
+    z-index: 2;
 }
 
 .header .header-box-info .icon-content{
+    position: absolute;
     display: inline-block;
     font-weight: 600;
+    font-size: 13px;
+    left: 16px;
+    top: 3px;
+    text-align: right;
+    width: 80px;
+    border-radius: 30px;
+    
+    padding: 0px 8px;
+}
+.wrapper-icon:hover .icon{
+    background: #292929;
+}
+.wrapper-icon:hover .icon-content{
+    background: #ccc;
 }
 .header .header-box-info .icon .fas{
     line-height: 2.1;
@@ -47,7 +71,7 @@
     /* height: 700px; */
 }
 .header-menu{
-    background: #333;
+    background: #292929;
     color: #fff;
 }
 .header-menu .col{
