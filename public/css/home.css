@@ -157,6 +157,9 @@
     width: 70%;
     margin: auto;
 }
+.footer .footer-intro-icon .footer-intro-icon-item{
+    /* float: left; */
+}
 .footer .footer-intro-icon::after{
     display: block;
     content: '';

@@ -9,7 +9,7 @@
                     SALA tự hào là đơn vị in ấn thiệp cưới với đội ngủ trẻ trung và chuyên nghiệp, kết hợp công nghệ in ấn thành phẩm hiện đại chắc chắn sẽ mang đến cho quý khách 1 ấn phẩm thiệp cưới ấn tượng, sang trọng và giá thành hợp lý.
                 </div>
                 <div class="footer-intro-icon">
-                    <div class="row" style="margin: auto;max-width: 70%">
+                    <div style="display: flex;align-items: center;justify-content: center;">
                         <div class="footer-intro-icon-item">
                             <div style="float: left;margin-right: 10px">
                                 <span class="fas fa-home fa-2x"></span>
