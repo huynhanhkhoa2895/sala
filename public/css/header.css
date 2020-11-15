@@ -31,13 +31,13 @@
     display: inline-block;
     color: #ffffff;
     background: #c8ad5b;
-    height: 25px;
-    width: 25px;
+    height: 40px;
+    width: 40px;
     border-radius: 100%;
     margin: auto;
     text-align: center;
     font-size: 11px;
-    padding-top: 5px;
+    padding-top: 9px;
     z-index: 2;
 }
 
@@ -45,13 +45,10 @@
     position: absolute;
     display: inline-block;
     font-weight: 600;
-    font-size: 13px;
-    left: 16px;
-    top: 3px;
+    font-size: 18px;
+    top: 5px;
     text-align: right;
-    width: 80px;
     border-radius: 30px;
-    
     padding: 0px 8px;
 }
 .wrapper-icon:hover .icon{
@@ -72,7 +69,38 @@
 }
 .header-menu{
     background: #292929;
+    
+}
+.header-menu a{
+    display: block;
     color: #fff;
+}
+.header-menu .header-menu-list{
+    position: relative;
+}
+.header-menu .header-menu-list-child{
+    display: none;
+    position: absolute;
+    top: 34px;
+    left: -10px;
+    width: calc(100% + 20px);
+    z-index: 100;
+    background: #292929;
+    
+}
+.header-menu .col:hover .header-menu-list-child{
+    display: block;
+}
+.header-menu .header-menu-list-child li{
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ffffff;
+}
+.header-menu .header-menu-list-child li a{
+    color: #fff;
+}
+.header-menu .header-menu-list-child li:hover{
+    background: #c8ad5b;
 }
 .header-menu .col{
     padding: 10px;

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Kind;
 use App\Models\Color;
 use App\Models\Style;
+use App\Models\News;
 use App\Models\Wedding_invitation;
 
 class Home extends Controller
@@ -15,6 +16,7 @@ class Home extends Controller
     public function index(){
         $data['color'] = Color::all();
         $data['style'] = Style::all();
+        $data['news'] = News::all();
         $data['product']=Wedding_invitation::all();
         return view("fontend/home",$data);
     }

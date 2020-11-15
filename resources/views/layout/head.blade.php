@@ -9,7 +9,7 @@
                     <div class="header-box">
                         <div class="name-company">CÔNG TY TNHH IN BAO BÌ SALA THIỆP CƯỚI SALA</div>
                         <div class="info">79 Đông Hưng Thuận 05, Phường Tân Hưng Thuận, Quận 12, Tp.HCM</div>
-                        <div class="info">0333.135.735 - 0907.000.008 (có gửi ben Zalo)</div>
+                        <div class="info">0333.135.735 - 0907.000.008</div>
                     </div>
                 </div>
                 <div class="col-md-5">
@@ -19,18 +19,18 @@
                                 <div class="wrapper-search">
                                     <div class="wrapper-icon">
                                         <div class="icon">
-                                            <span class="fas fa-phone"></span>
+                                            <span class="fas fa-phone fa-2x"></span>
                                         </div>
-                                        <div class="icon-content">Điện thoại</div>
+                                        <div class="icon-content" style="left: 25px;min-width: 130px">Liên hệ ngay</div>
                                     </div>
                                     <div class="wrapper-icon">
                                         <div class="icon">
-                                            <span class="fas fa-shopping-cart"></span>
+                                            <span class="fas fa-shopping-cart fa-2x"></span>
                                         </div>
-                                        <div class="icon-content">Giỏ hàng</div>
+                                        <div class="icon-content" style="left: 25px;min-width: 100px">Giỏ hàng</div>
                                     </div>
                                 </div>
-                                <div class="row" style="padding-top: 10px">
+                                <div class="row" style="padding-top: 30px">
                                     <div class="col-12 pd0">
                                         <div class="input-group mb-3">
                                             <input type="text" class="form-control sala-input" placeholder="Tìm kiếm" aria-label="Recipient's username" aria-describedby="basic-addon2">

@@ -9,19 +9,26 @@
     <div class="header-menu">
         <div class="row">
             <div class="col">
-                TRANG CHỦ
+                <a href="#">TRANG CHỦ</a>
             </div>
             <div class="col">
-                GIỚI THIỆU
+                <a href="#intro">GIỚI THIỆU</a>
             </div>
             <div class="col">
-                CÁC LOẠI THIỆP
+                <div class="header-menu-list pd0">
+                    <a href="#">CÁC LOẠI THIỆP</a>
+                    <ul class="header-menu-list-child">
+                        @foreach ($style as $item)
+                            <li><a href="#">{{$item->content}}</a></li>
+                        @endforeach
+                    </ul>
+                </div>
             </div>
             <div class="col">
-                TIN TỨC
+                <a href="#news">TIN TỨC</a>
             </div>
             <div class="col">
-                LIÊN HỆ
+                <a href="#footer">LIÊN HỆ</a>
             </div>
         </div>
     </div>
@@ -115,28 +122,30 @@
             </div>
         </div>
     </div>
-    <div class="news">
+    <div id="news" class="news">
         <div class="row">
             <div class="col-md-12 pd0">
                 <div class="title text-center">TIN TỨC</div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" style="padding: 10px">
             <div class="col-12">
                 <div class="owl-carousel owl-theme">
-                    <div class="item"><h4>Tin tức 1</h4></div>
-                    <div class="item"><h4>Tin tức 2</h4></div>
-                    <div class="item"><h4>Tin tức 3</h4></div>
-                    <div class="item"><h4>Tin tức 4</h4></div>
-                    <div class="item"><h4>Tin tức 5</h4></div>
-                    <div class="item"><h4>Tin tức 6</h4></div>
-                    <div class="item"><h4>Tin tức 7</h4></div>
-                    <div class="item"><h4>Tin tức 8</h4></div>
+                    @foreach($news as $new)
+                        <div class="item">
+                            <h4 class="title-news"><a href="{{$new->slug}}">{{$new->title}}</a></h4>
+                            <div class="img-news">
+                                <a href="{{$new->slug}}">
+                                    <img src="{{asset("img/news/".$new->img)}}" alt="{{$new->title}}" />
+                                </a>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>
     </div>
-    <div class="intro">
+    <div id="intro" class="intro">
         <div class="row">
             <div class="col-md-12">
                 <div class="title text-center" style="font-family: mtd">
@@ -201,9 +210,6 @@
                     600:{
                         items:3
                     },
-                    1000:{
-                        items:5
-                    }
                 }
             })
             $('.product-list-kind-item').on("mouseenter",function(){

@@ -1,0 +1,70 @@
+.footer{
+    background: #292929;
+    padding: 20px;
+    color: #fff;
+}
+.footer .footer-intro .title{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.footer .footer-intro .content{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    line-height: 2;
+}
+.footer .footer-intro-icon{
+    color: #c8ad5b;
+}
+.footer .list-link{
+    text-align: right;
+}
+.footer .list-link .title{
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+.footer .list-link .title::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20%;
+    top: 40px;
+    right: 5px;
+    border: 1px solid;
+}
+.footer .list-link a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
+.footer .list-link .list-item li:hover a,.footer .list-link .list-item li:hover svg{
+    color: #c8ad5b;
+}
+.footer .list-link .list-item{
+    margin-top: 10px;
+}
+.footer .footer-intro-icon{
+    width: 70%;
+    margin: auto;
+}
+.footer .footer-intro-icon .footer-intro-icon-item{
+    /* float: left; */
+}
+.footer .footer-intro-icon::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.footer .footer-map{
+    margin-top: 20px;
+}
+.footer .group-icon{
+    text-align: left;
+}
+.footer .group-icon .group-icon-item{
+    display: inline-block;
+}
