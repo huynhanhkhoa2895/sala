@@ -157,11 +157,15 @@
     text-transform: capitalize;
     font-weight: bold;
     text-align: center;
-    min-height: 50px;
+    min-height: 20px;
 }
 .img-news{
     overflow: hidden;
     width: 100%;
+}
+.img-news:hover{
+    border: 3px solid red;
+    /* box-shadow: 1px 2px 3px 6px #ccc; */
 }
 .img-news img{
     width: 100%;

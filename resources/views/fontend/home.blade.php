@@ -184,7 +184,7 @@
             </div>
             <div class="col">
                 <span class="fas fa-money-bill fa-3x"></span>
-                <span class="text">Mẫu mã đa dạng</span>
+                <div class="text" style="width: 80px">Mẫu mã đa dạng</div>
             </div>
             <div class="col">
                 <span class="fas fa-smile fa-3x"></span>
