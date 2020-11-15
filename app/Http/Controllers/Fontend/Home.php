@@ -13,7 +13,6 @@ class Home extends Controller
 {
     //
     public function index(){
-        $data['kind'] = Kind::all();
         $data['color'] = Color::all();
         $data['style'] = Style::all();
         $data['product']=Wedding_invitation::all();

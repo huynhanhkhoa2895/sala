@@ -16,15 +16,27 @@ class ColorSeeder extends Seeder
         //
         DB::table('color')->insert([
             [
-                'code' => 'red',
                 'content' => 'Đỏ',
             ],
             [
-                'code' => 'pink',
                 'content' => 'Hồng',
             ],
             [
-                'code' => 'blue',
+                'content' => 'Cam',
+            ],
+            [
+                'content' => 'Xanh',
+            ],
+            [
+                'content' => 'Tím',
+            ],
+            [
+                'content' => 'Trắng',
+            ],
+            [
+                'content' => 'Kim',
+            ],
+            [
                 'content' => 'Xanh',
             ],
         ]);

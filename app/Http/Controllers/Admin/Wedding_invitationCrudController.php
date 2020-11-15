@@ -43,14 +43,7 @@ class Wedding_invitationCrudController extends CrudController
             [
                 'name' => 'image',
                 'type' => 'image',
-                'prefix' => 'img/',
-            ],
-            
-        );
-        CRUD::addColumn(
-            [
-                'name' => 'code',
-                'type' => 'text'
+                'prefix' => 'img/product/',
             ],
             
         );
@@ -61,16 +54,6 @@ class Wedding_invitationCrudController extends CrudController
                 'type'     => 'closure',
                 'function' => function($entry) {
                     return Model::find($entry->id)->colors()->where("id",$entry->color)->first()->content;
-                }
-            ]
-        );
-        CRUD::addColumn(
-            [
-                'name' => 'kind',
-                'label' => 'Kiểu thiệp',
-                'type'     => 'closure',
-                'function' => function($entry) {
-                    return Model::find($entry->id)->kinds()->where("id",$entry->kind)->first()->content;
                 }
             ]
         );
@@ -107,19 +90,30 @@ class Wedding_invitationCrudController extends CrudController
         CRUD::addField(
             [
                 'name' => 'image',
+                'name' => "image",
                 'type' => 'image',
-                'prefix' => 'img/product/',
+                'aspect_ratio' => 1,
+                'label' => 'Hình sản phẩm',
             ],
             
         );
         CRUD::addField(
             [
-                'name' => 'code',
+                'name' => 'name',
+                'label' => 'Tên sản phẩm',
                 'type' => 'text'
             ],
         );
         CRUD::addField(
             [
+                'name' => 'price',
+                'label' => 'Giá tiền',
+                'type' => 'number'
+            ],
+        );
+        CRUD::addField(
+            [
+                'label' => 'Màu sắc',
                 'name' => 'colors',
                 'type' => 'relationship',
                 'placeholder' => "Lựa chọn màu",
@@ -131,7 +125,14 @@ class Wedding_invitationCrudController extends CrudController
          * - CRUD::addField(['name' => 'price', 'type' => 'number'])); 
          */
     }
-
+    // public function store(Wedding_invitationRequest $request)
+    // {
+    //     // <---------  here is where a before_insert callback logic would be
+    //     $response = parent::storeCrud();
+    //     dd($response);
+    //     // <---------  here is where a after_insert callback logic would be
+    //     return $response;
+    // }
     /**
      * Define what happens when the Update operation is loaded.
      * 

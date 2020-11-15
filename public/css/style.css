@@ -64,8 +64,8 @@ ul>li{
     margin: auto;
     cursor: pointer;
 }
-.icon-filter .fas{
-
+.no-bg{
+    background-image: unset !important;
 }
 input.sala-input:focus{
     border: 1px solid #eee

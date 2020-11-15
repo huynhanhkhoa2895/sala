@@ -27,6 +27,10 @@ class Wedding_invitationRequest extends FormRequest
     {
         return [
             // 'name' => 'required|min:5|max:255'
+            'name' => 'required',
+            'image' => 'required',
+            'style' => 'required',
+            'color' => 'required'
         ];
     }
 

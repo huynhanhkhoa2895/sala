@@ -16,6 +16,7 @@ class CreateStyleTable extends Migration
         Schema::create('style', function (Blueprint $table) {
             $table->id();
             $table->string("content");
+            $table->string("img");
             $table->timestamps();
         });
     }
