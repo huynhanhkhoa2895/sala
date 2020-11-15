@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             StyleSeeder::class,
             ColorSeeder::class,
-            WeddingInvitationSeeder::class
+            WeddingInvitationSeeder::class,
+            NewsSeeder::class
         ]);
     }
 }

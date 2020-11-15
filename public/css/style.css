@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: roboto;
 }
 body,html{
     width: 100%;
@@ -67,6 +68,8 @@ ul>li{
 .no-bg{
     background-image: unset !important;
 }
-input.sala-input:focus{
-    border: 1px solid #eee
+input.sala-input:focus,select.sala-input:focus{
+    border: 1px solid #eee;
+    background: #eee;
 }
+

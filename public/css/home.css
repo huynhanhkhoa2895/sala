@@ -15,7 +15,9 @@
     text-align: center;
     font-weight: 500;
 }
-
+.product-list-kind .row:last-child .product-list-kind-item{
+    border-bottom: unset;
+}
 .product-list-kind .product-list-kind-item.no-bg a{
     color: #333;
 }
@@ -37,6 +39,9 @@
 }
 .product-list{
     margin-top: 20px;
+}
+.prodict-list-item{
+    padding-left: 10px;
 }
 .prodict-list-item::after{
     content: '';
@@ -87,13 +92,12 @@
     color: #fff;
     font-size: 36px;
     font-weight: bold;
-    padding: 30px;
+    padding: 10px;
 }
 .intro .title{
     color: #c8ad5b;
     font-size: 136px;
-    font-weight: bold;
-    padding: 30px;
+    padding: 5px;
 }
 .intro .contact::before{
     content: '';
@@ -125,70 +129,6 @@
 .intro2 .col:last-child{
     border: unset;
 }
-.footer{
-    background: #292929;
-    padding: 20px;
-    color: #fff;
-}
-.footer .footer-intro .title{
-    font-size: 30px;
-    text-decoration: underline;
-    text-transform: uppercase;
-}
-.footer .footer-intro .content{
-    max-width: 350px;
-    text-align: center;
-    margin: auto;
-    line-height: 2;
-}
-.footer .footer-intro-icon{
-    color: #c8ad5b;
-}
-.footer .list-link{
-    text-align: right;
-}
-.footer .list-link .title{
-    font-size: 28px;
-    font-weight: 700;
-    color: #fff;
-    text-decoration: none;
-    position: relative;
-}
-.footer .list-link .title::after{
-    content: "";
-    display: block;
-    position: absolute;
-    width: 20%;
-    top: 40px;
-    right: 5px;
-    border: 1px solid;
-}
-.footer .list-link a{
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-}
-.footer .list-link .list-item li:hover a,.footer .list-link .list-item li:hover svg{
-    color: #c8ad5b;
-}
-.footer .list-link .list-item{
-    margin-top: 10px;
-}
-.footer .footer-intro-icon{
-    width: 70%;
-    margin: auto;
-}
-.footer .footer-intro-icon .footer-intro-icon-item{
-    /* float: left; */
-}
-.footer .footer-intro-icon::after{
-    display: block;
-    content: '';
-    clear: both;
-}
-.footer .footer-map{
-    margin-top: 20px;
-}
 .prodict-list-item-box{
     width: 250px;
     margin: 10px;
@@ -209,4 +149,20 @@
     border-radius: 20px;
     font-size: 18px !important;
     margin-bottom: 10px;
+}
+.title-news a{
+    font-size: 18px;
+    display: block;
+    max-width: 100%;
+    text-transform: capitalize;
+    font-weight: bold;
+    text-align: center;
+    min-height: 50px;
+}
+.img-news{
+    overflow: hidden;
+    width: 100%;
+}
+.img-news img{
+    width: 100%;
 }

@@ -1,4 +1,4 @@
-<div class="footer">
+<div id="footer" class="footer">
     <div class="row">
         <div class="col-12 text-center">
             <div class="footer-intro">
@@ -6,11 +6,13 @@
                     Về chúng tôi
                 </div>
                 <div class="content">
-                    SALA tự hào là đơn vị in ấn thiệp cưới với đội ngủ trẻ trung và chuyên nghiệp, kết hợp công nghệ in ấn thành phẩm hiện đại chắc chắn sẽ mang đến cho quý khách 1 ấn phẩm thiệp cưới ấn tượng, sang trọng và giá thành hợp lý.
+                    <div>SALA tự hào là đơn vị in ấn thiệp cưới với đội ngủ trẻ trung và chuyên nghiệp, </div> 
+                    <div>Kết hợp công nghệ in ấn thành phẩm hiện đại chắc chắn sẽ mang đến cho quý</div>
+                    <div>khách 1 ấn phẩm thiệp cưới ấn tượng, sang trọng và giá thành hợp lý.</div>
                 </div>
                 <div class="footer-intro-icon">
                     <div style="display: flex;align-items: center;justify-content: center;">
-                        <div class="footer-intro-icon-item">
+                        <div class="footer-intro-icon-item" style="margin-right: 142px;margin-bottom: 10px;margin-top: 10px;">
                             <div style="float: left;margin-right: 10px">
                                 <span class="fas fa-home fa-2x"></span>
                             </div>
@@ -40,6 +42,12 @@
                     <div class="row" style="max-width: 80%;margin: auto;">
                         <div class="col-12 col-md-7">
                             <img src="{{asset('google-map.png')}}" width="100%" />
+                            <div class="group-icon">
+                                <h3><u>CONTACT US</u></h3>
+                                <div class="group-icon-item"><img src={{asset("img/fb.png")}} width="40px"/></div>
+                                <div class="group-icon-item"><img src={{asset("img/ins.png")}} width="40px"/></div>
+                                <div class="group-icon-item"><img src={{asset("img/zalo.png")}} width="40px"/></div>
+                            </div>
                         </div>
                         <div class="col-12 col-md-5">
                             <div class="list-link">
@@ -66,6 +74,7 @@
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
