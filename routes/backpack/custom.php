@@ -17,5 +17,4 @@ Route::group([
     Route::crud('color', 'ColorCrudController');
     Route::crud('wedding_invitation', 'Wedding_invitationCrudController');
     Route::crud('style', 'StyleCrudController');
-    Route::crud('kind', 'KindCrudController');
 }); // this should be the absolute last line of this file

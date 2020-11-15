@@ -6,6 +6,25 @@
     
 @endsection
 @section('content')
+    <div class="header-menu">
+        <div class="row">
+            <div class="col">
+                TRANG CHỦ
+            </div>
+            <div class="col">
+                GIỚI THIỆU
+            </div>
+            <div class="col">
+                CÁC LOẠI THIỆP
+            </div>
+            <div class="col">
+                TIN TỨC
+            </div>
+            <div class="col">
+                LIÊN HỆ
+            </div>
+        </div>
+    </div>
     <div class="products">
         <div class="row">
             <div class="col-sm-5 col-md-4 col-lg-3 pd0">
@@ -17,10 +36,10 @@
                             </div>
                         </div>
                     </div>
-                    @foreach ($kind as $item)
+                    @foreach ($style as $item)
                     <div class="row">
                         <div class="col">
-                            <div class="product-list-kind-item">
+                            <div class="product-list-kind-item no-bg" style="background-image: url({{asset("img/style/".$item->img)}});background-size: cover;background-position: center;">
                                 <a href={{url("danh-muc/".$item->id)}}>{{$item->content}}</a>
                             </div>
                         </div>
@@ -61,6 +80,11 @@
                                     <div class="col">
                                         <select class="form-control sala-input">
                                             <option value="0">Chọn giá</option>
+                                            <option value="1500">Thiệp cưới giá 1.500</option>
+                                            <option value="1800">Thiệp cưới giá 1.800</option>
+                                            <option value="1900">Thiệp cưới giá 1.900</option>
+                                            <option value="2400">Thiệp cưới giá 2.400</option>
+                                            <option value="2500">Thiệp cưới giá 2.500</option>
                                             <option value="asc">Thấp tới cao</option>
                                             <option value="desc">Cao tới thấp</option>
                                         </select>
@@ -180,6 +204,16 @@
                     1000:{
                         items:5
                     }
+                }
+            })
+            $('.product-list-kind-item').on("mouseenter",function(){
+                if($(this).hasClass("no-bg")){
+                    $(this).removeClass("no-bg");
+                }
+            })
+            $('.product-list-kind-item').on("mouseleave",function(){
+                if(!$(this).hasClass("no-bg")){
+                    $(this).addClass("no-bg");
                 }
             })
         })

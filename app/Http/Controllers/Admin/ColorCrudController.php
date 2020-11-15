@@ -28,7 +28,7 @@ class ColorCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\Color::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/color');
-        CRUD::setEntityNameStrings('color', 'colors');
+        CRUD::setEntityNameStrings('color', 'Màu sắc');
     }
 
     /**
@@ -44,7 +44,7 @@ class ColorCrudController extends CrudController
             'name' => 'content',
             'type' => 'closure',
             'function' => function($entry) {
-                return '<div style="height : 10px;width : 10px;background : '.$entry->content.'"/></div>';
+                return '<div style="height : 10px;width : 10px"/>'.$entry->content.'</div>';
             },
         ]);
         /**

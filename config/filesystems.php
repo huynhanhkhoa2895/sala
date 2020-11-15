@@ -1,5 +1,4 @@
 <?php
-
 return [
 
     /*
@@ -40,18 +39,21 @@ return [
     | Supported Drivers: "local", "ftp", "sftp", "s3"
     |
     */
-
+    
     'disks' => [
 
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),
         ],
-
+        'public_img_product' => [
+            'driver' => 'local',
+            'root' => public_path('img/product'),
+            'visibility' => 'public',
+        ],
         'public' => [
             'driver' => 'local',
-            'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
+            'root' => public_path(),
             'visibility' => 'public',
         ],
 

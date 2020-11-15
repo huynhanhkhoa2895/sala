@@ -77,22 +77,3 @@
         </div>
     </div>
 </div>
-<div class="header-menu">
-    <div class="row">
-        <div class="col">
-            TRANG CHỦ
-        </div>
-        <div class="col">
-            GIỚI THIỆU
-        </div>
-        <div class="col">
-            CÁC LOẠI THIỆP
-        </div>
-        <div class="col">
-            TIN TỨC
-        </div>
-        <div class="col">
-            LIÊN HỆ
-        </div>
-    </div>
-</div>
