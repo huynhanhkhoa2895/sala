@@ -14,8 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 Route::group(["namespace"=>"App\Http\Controllers\Fontend"],function(){
     Route::get('/',"Home@index");
-    Route::group(["prefix"=>"product"],function(){
-        Route::get('/product/{slug}',"Product@detail");
+    Route::group(["prefix"=>"thiep"],function(){
+        Route::get('{slug}',"Product@detail");
     });
+    Route::group(["prefix"=>"cart"],function(){
+        Route::post('/add',"Cart@Add");
+    });
+    
 });
 

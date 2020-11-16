@@ -5,33 +5,35 @@
     <link href="{{asset("css/owl.theme.default.min.css")}}" rel="stylesheet" />
     
 @endsection
-@section('content')
-    <div class="header-menu">
+@section('carousel')
+    <div class="carousel">
         <div class="row">
-            <div class="col">
-                <a href="#">TRANG CHỦ</a>
-            </div>
-            <div class="col">
-                <a href="#intro">GIỚI THIỆU</a>
-            </div>
-            <div class="col">
-                <div class="header-menu-list pd0">
-                    <a href="#">CÁC LOẠI THIỆP</a>
-                    <ul class="header-menu-list-child">
-                        @foreach ($style as $item)
-                            <li><a href="#">{{$item->content}}</a></li>
-                        @endforeach
-                    </ul>
+            <div class="col-12 pd0">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="{{asset("img/banner/b1.png")}}" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="{{asset("img/banner/b2.png")}}" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="{{asset("img/banner/b3.png")}}" alt="Third slide">
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col">
-                <a href="#news">TIN TỨC</a>
-            </div>
-            <div class="col">
-                <a href="#footer">LIÊN HỆ</a>
             </div>
         </div>
     </div>
+@endsection
+@section('content')
+
+
     <div class="products">
         <div class="row">
             <div class="col-sm-5 col-md-4 col-lg-3 pd0">
