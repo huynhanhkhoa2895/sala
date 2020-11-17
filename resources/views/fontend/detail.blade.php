@@ -27,11 +27,11 @@
                             <div class="product-update">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text"><span class="fas fa-minus"></span></span>
+                                        <span class="input-group-text" onclick="changeQty('minus')"><span class="fas fa-minus"></span></span>
                                     </div>
-                                    <input type="text" class="form-control qty-input" value="1" readonly />
+                                    <input id="input-qty" type="text" class="form-control qty-input" value="1" readonly />
                                     <div class="input-group-append">
-                                        <span class="input-group-text"><span class="fas fa-plus"></span>
+                                        <span class="input-group-text" onclick="changeQty('plus')"><span class="fas fa-plus"></span>
                                     </div>
                                 </div>
                             </div>
@@ -75,7 +75,7 @@
     <script src="{{asset("js/zoom/zoom.min.js")}}"></script>
     <script>
         var options = {
-            width: 600, // required
+            width: 400, // required
             scale: 0.5,
             // zoomWidth: 50,
             zoomContainer: document.getElementById("product-img-zoom-container"),

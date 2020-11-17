@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Fontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use App\Models\Wedding_invitation as Model;
+
 class Cart extends Controller
 {
     //
@@ -22,12 +24,19 @@ class Cart extends Controller
         if(!$check){
             $rq->session()->put('cart', $new_cart);
         }else{
+            $product = Model::find($rq->id);
             $cart = [
                 "id" => $rq->id,
+                "name" => $rq->name,
+                "price" => $rq->price,
+                "img" => $rq->image,
                 "qty" => $rq->qty,
             ];
             $rq->session()->push('cart', $cart);
         }
         return response()->json($rq->session()->get('cart'));
+    }
+    function Clear(Request $request){
+        return $request->session()->forget('cart');
     }
 }

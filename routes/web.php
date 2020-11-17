@@ -19,7 +19,10 @@ Route::group(["namespace"=>"App\Http\Controllers\Fontend"],function(){
     });
     Route::group(["prefix"=>"cart"],function(){
         Route::post('/add',"Cart@Add");
+        Route::get('/clear',"Cart@Clear");
     });
-    
+    Route::group(["prefix"=>"loai-thiep"],function(){
+        Route::get('{id}',"Category@index");
+    });
 });
 

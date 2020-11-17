@@ -5,6 +5,7 @@
     border-radius: 10px;
     text-align: center;
 }
+
 .wrapper-search::after{
     content: '';
     display: block;
@@ -110,4 +111,19 @@
 .header-menu .col:hover{
     background: #c8ad5b;
     border-color: #c8ad5b;
+}
+.wrapper-cart-header{
+    position: relative;
+}
+.wrapper-cart-header .wrapper-cart-header-popup{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    padding: 20px;
+    z-index: 100;
+}
+.wrapper-cart-header .wrapper-cart-header-popup .cart-header-popup-item{
+    padding: 10px;
+    
 }

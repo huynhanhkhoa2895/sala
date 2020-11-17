@@ -1,7 +1,9 @@
 <div class="header">
     <div class="row">
         <div class="col-md-2 col-xs-3 text-center">
-            <img src="{{asset("logo.png")}}" width="150px">
+            <a href="{{url("/")}}">
+                <img src="{{asset("logo.png")}}" width="150px" />
+            </a>
         </div>
         <div class="col-md-10 col-xs-9">
             <div class="row">
@@ -23,11 +25,23 @@
                                         </div>
                                         <div class="icon-content" style="left: 25px;min-width: 130px">Liên hệ ngay</div>
                                     </div>
-                                    <div class="wrapper-icon">
+                                    <div class="wrapper-icon wrapper-cart-header">
                                         <div class="icon">
                                             <span class="fas fa-shopping-cart fa-2x"></span>
                                         </div>
                                         <div class="icon-content" style="left: 25px;min-width: 100px">Giỏ hàng</div>
+                                        @if(session()->has('cart'))
+                                            <div class="wrapper-cart-header-popup">
+                                                @foreach(session()->get("cart") as $cart)
+                                                    <div class="cart-header-popup-item">
+                                                        <div class="cart-header-popup-item-img">
+                                                            <img  />
+                                                        </div>
+                                                        <div class="cart-header-popup-item-img"></div>
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="row" style="padding-top: 30px">

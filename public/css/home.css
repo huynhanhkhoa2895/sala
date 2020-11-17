@@ -2,6 +2,7 @@
     background: #dfdfdf;
     padding: 15px;
     height: 100%;
+    max-width: 300px;
 }
 .product-list-kind .product-list-kind-header{
     text-align: center;

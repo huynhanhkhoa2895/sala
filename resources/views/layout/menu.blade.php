@@ -15,7 +15,7 @@
                 <a href="#">CÁC LOẠI THIỆP</a>
                 <ul class="header-menu-list-child">
                     @foreach ($style as $item)
-                        <li><a href="#">{{$item->content}}</a></li>
+                        <li><a href="{{url("loai-thiep/".$item->id)}}">{{$item->content}}</a></li>
                     @endforeach
                 </ul>
             </div>
