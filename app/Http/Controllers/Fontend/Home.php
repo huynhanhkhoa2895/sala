@@ -20,4 +20,8 @@ class Home extends Controller
         $data['product']=Wedding_invitation::all();
         return view("fontend/home",$data);
     }
+    public function getListStyle(){
+        return Style::all();
+
+    }
 }

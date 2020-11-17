@@ -12,5 +12,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(["namespace"=>"App\Http\Controllers\Fontend"],function(){
+    Route::get('/',"Home@index");
+    Route::group(["prefix"=>"thiep"],function(){
+        Route::get('{slug}',"Product@detail");
+    });
+    Route::group(["prefix"=>"cart"],function(){
+        Route::post('/add',"Cart@Add");
+    });
+    
+});
 
-Route::get('/',"App\Http\Controllers\Fontend\Home@index");

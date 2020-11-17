@@ -72,4 +72,63 @@ input.sala-input:focus,select.sala-input:focus{
     border: 1px solid #eee;
     background: #eee;
 }
+.product-list{
+    margin-top: 20px;
+}
+.prodict-list-item{
+    padding-left: 10px;
+}
+.prodict-list-item:first-child{
+    padding-left: 0;
+}
+.prodict-list-item::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.prodict-list-item .prodict-list-item-box{
+    height: 370px;
+    float: left;
+}
+.prodict-list-item .prodict-list-item-box .box-img{
+    height: 250px;
+    overflow: hidden;
+    width: 100%;
+    cursor: pointer;
+}
+.prodict-list-item .prodict-list-item-box .box-img img{
+    width: 100%;
+    height: 250px;
+}
+.prodict-list-item .prodict-list-item-box .box-info{
+    height: 50px;
+}
+.prodict-list-item .prodict-list-item-box .box-info div{
+    width: 100%;
+    text-align: center;
+}
+.prodict-list-item .product-name{
+    font-size: 18px;
+    font-weight: 700;
+    color: #c8ad5b;
+}
+.prodict-list-item .product-cart a{
+    display: block;
+    padding: 10px;    
+    background: #c8ad5b;
+    color: #fff;
+    margin-bottom: 20px;
+    width: max-content;
+    margin: auto;
+    border-radius: 6px;
+}
+.prodict-list-item-box{
+    width: 250px;
+    margin: 10px;
+    padding: 10px;
+}
+.prodict-list-item-box:hover{
+    box-shadow: 1px 2px 3px 6px #ccc;
+    border-radius: 10px;
+}
 
