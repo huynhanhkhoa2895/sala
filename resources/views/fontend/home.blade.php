@@ -179,16 +179,7 @@
                     },
                 }
             })
-            $('.product-list-kind-item').on("mouseenter",function(){
-                if($(this).hasClass("no-bg")){
-                    $(this).removeClass("no-bg");
-                }
-            })
-            $('.product-list-kind-item').on("mouseleave",function(){
-                if(!$(this).hasClass("no-bg")){
-                    $(this).addClass("no-bg");
-                }
-            })
+
         })
     </script>
 @endpush

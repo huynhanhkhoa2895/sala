@@ -127,3 +127,16 @@
     cursor: pointer;
     background: #ffffff;
 }
+.btn-payment{
+    background: #c8ad5b;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 20px;
+    width: max-content;
+    text-transform: capitalize;
+}
+button.btn-payment{
+    border: 1px solid #c8ad5b;
+    box-shadow: none;
+    outline: unset;
+}
