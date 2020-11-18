@@ -27,9 +27,9 @@ class Cart extends Controller
             $product = Model::find($rq->id);
             $cart = [
                 "id" => $rq->id,
-                "name" => $rq->name,
-                "price" => $rq->price,
-                "img" => $rq->image,
+                "name" => $product->name,
+                "price" => $product->price,
+                "img" => $product->image,
                 "qty" => $rq->qty,
             ];
             $rq->session()->push('cart', $cart);
@@ -38,5 +38,20 @@ class Cart extends Controller
     }
     function Clear(Request $request){
         return $request->session()->forget('cart');
+    }
+    function Checkout(Request $rq){
+        $carts = $rq->session()->get("cart",[]);
+        $id = [];
+        if(empty($carts)){
+            return redirect(url("/"));
+        }
+        foreach($carts as $cart){
+            array_push($id,$cart['id']);            
+        }
+        $data['product'] = Model::whereIn("id",$id)->get();
+        return view("fontend.checkout",$data);
+    }
+    function RemoveProduct(Request $request){
+        return redirect()->route("cart-checkout");
     }
 }

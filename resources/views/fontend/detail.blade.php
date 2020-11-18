@@ -25,13 +25,13 @@
                         <div class="product-content-container-item">
                             <div class="product-price">{{number_format($product->price)}} VND</div>
                             <div class="product-update">
-                                <div class="input-group mb-3">
+                                <div class="product-update-input-group input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" onclick="changeQty('minus')"><span class="fas fa-minus"></span></span>
+                                        <span class="input-group-text" onclick="changeQty(this,'minus')"><span class="fas fa-minus"></span></span>
                                     </div>
                                     <input id="input-qty" type="text" class="form-control qty-input" value="1" readonly />
                                     <div class="input-group-append">
-                                        <span class="input-group-text" onclick="changeQty('plus')"><span class="fas fa-plus"></span>
+                                        <span class="input-group-text" onclick="changeQty(this,'plus')"><span class="fas fa-plus"></span>
                                     </div>
                                 </div>
                             </div>

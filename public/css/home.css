@@ -116,3 +116,14 @@
 .img-news img{
     width: 100%;
 }
+
+.product-update-input-group.input-group input{
+    text-align: center;
+}
+.product-update-input-group.input-group .form-control[readonly]{
+    background: #ffffff;
+}
+.product-update-input-group.input-group span{
+    cursor: pointer;
+    background: #ffffff;
+}

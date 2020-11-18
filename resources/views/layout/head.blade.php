@@ -35,11 +35,21 @@
                                                 @foreach(session()->get("cart") as $cart)
                                                     <div class="cart-header-popup-item">
                                                         <div class="cart-header-popup-item-img">
-                                                            <img  />
+                                                            <div class="img-popup-cart" style="background-image: url({{asset("img/product/".$cart['img'])}});">
+
+                                                            </div>
                                                         </div>
-                                                        <div class="cart-header-popup-item-img"></div>
+                                                        <div class="cart-header-popup-item-content">
+                                                            <div class="name">{{$cart['name']}}</div>
+                                                            <div class="price">{{number_format($cart['price'])}} VND</div>
+                                                            <div class="qty">Số lượng: <b>{{number_format($cart['qty'])}}</b></div>
+                                                            <div class="total">Thành tiền: <b>{{number_format($cart['qty']*$cart['price'])}} VND</b></div>
+                                                        </div>
                                                     </div>
                                                 @endforeach
+                                                <div class="cart-header-popup-footer">
+                                                    <a href="{{url("cart/checkout")}}">Thanh toán</a>
+                                                </div>
                                             </div>
                                         @endif
                                     </div>

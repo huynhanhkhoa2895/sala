@@ -5,15 +5,16 @@ function handleClickSendEmailContact(){
     $(".send-success-message").show();
     $(".send-success .input-group").hide();
 }
-function changeQty(type){
-    let val = $("#input-qty").val();
+function changeQty(it,type){
+    let input = $(it).closest(".input-group").find("input");
+    let val = $(it).closest(".input-group").find("input").val();
     if(type === "plus"){
-        $("#input-qty").val(Number(val)+1)
+        $(input).val(Number(val)+1)
     }else{
         if(val <= 1){
-            $("#input-qty").val(1)
+            $(input).val(1)
         }else{
-            $("#input-qty").val(Number(val)-1)
+            $(input).val(Number(val)-1)
         }
     }
 }
