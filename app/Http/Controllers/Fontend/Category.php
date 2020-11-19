@@ -11,7 +11,14 @@ class Category extends Controller
     //
     public function index(Request $rq){
         $id = Style::where("id",$rq->id)->first()->id;
-        $data['product']= Wedding_invitation::where("style",$id)->orderBy("id","desc")->paginate(15);
+        $db = Wedding_invitation::where("style",$id);
+        if(!empty($rq->color)){
+            $db->where("color",$rq->color);
+        }
+        // if(!empty($rq->price)){
+        //     $db->where("color",$rq->price);
+        // }
+        $data['product']= $db->orderBy("id","desc")->paginate(15);
         return view("fontend.list",$data);
     }
 }

@@ -57,7 +57,7 @@
                                 <div class="row" style="padding-top: 30px">
                                     <div class="col-12 pd0">
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control sala-input" placeholder="Tìm kiếm" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                            <input type="text" class="form-control sala-input" placeholder="Tìm kiếm" id="search">
                                             <div class="input-group-append">
                                                 <span class="input-group-text bg-main" id="basic-addon2"><span class="fas fa-search color-w"></span></span>
                                             </div>

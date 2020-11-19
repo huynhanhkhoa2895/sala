@@ -176,3 +176,11 @@
     font-style: italic;
     color: #ccc;
 }
+@media only screen and (max-width: 1090px){
+    .header .header-box-info .wrapper-icon{
+        float: unset;
+    }
+    .header .header-box-info .wrapper-icon.wrapper-cart-header{
+        margin-top: 20px;
+    }
+}

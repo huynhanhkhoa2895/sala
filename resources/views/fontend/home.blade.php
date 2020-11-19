@@ -126,7 +126,7 @@
                     <p>Thời gian in: 8-10 ngày (Tùy mẫu)</p>
                     <p>Không in được: hình CDCR, tiếng hoa và mẫu thiết kế riêng</p>
                 </div>
-                <div class="contact text-center">
+                <div class="contact text-center" id="contact">
                     <div>Nhập email hoặc số điện thoại để được tư vấn ngay</div>
                     <div class="send-success">
                         <div style="margin: 10px auto;max-width: 500px" class="input-group mb-3">

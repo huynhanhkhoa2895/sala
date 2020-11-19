@@ -1,5 +1,5 @@
 <div id="footer" class="footer">
-    <div class="row">
+    {{-- <div class="row">
         <div class="col-12 text-center">
             <div class="footer-intro">
                 <div class="title">
@@ -76,6 +76,38 @@
                     </div>
                     
                 </div>
+            </div>
+        </div>
+    </div> --}}
+    <div class="row footer-new">
+        <div class="col-md-3 col-xs-12">
+            <h3>THIỆP CƯỚI SALA</h3>
+            <div class="info"><span class="fas fa-share"></span> CÔNG TY TNHH IN BAO BÌ SALA THIỆP CƯỚI SALA</div>
+            <div class="info"><a href="#0333135735"><span class="fas fa-phone-square"></span> 0333.135.735</a></div>
+            <div class="info"><a href="#090700008"><span class="fas fa-phone-square"></span> 090700008</a></div>
+            <div class="info"><a href="#THIEPCUOISALA123@GMAIL.COM"><span class="fas fa-envelope"></span> Email: congtyin.ads@gmail.com</a></div>
+        </div>
+        <div class="col-md-3 col-xs-12">
+            <h3>Danh mục</h3>
+            <div class="category"><a href="#intro">GIỚI THIỆU</a></div>
+            <div class="category"><a href="#news">TIN TỨC</a></div>
+            <div class="category"><a href="#contact">Liên hệ</a></div>
+        </div>
+        <div class="col-md-3 col-xs-12">
+            <h3>Dịch vụ hỗ trợ</h3>
+            <div class="info-link"><a href="#">Câu hỏi thường gặp</a></div>
+            <div class="info-link"><a href="#">Chính sách bảo hành</a></div>
+            <div class="info-link"><a href="#">Chính sách bảo mật thông tin</a></div>
+            <div class="info-link"><a href="#"><img src="{{asset("img/bcs.png")}}" width="100%" /></a></div>
+        </div>
+        <div class="col-md-3 col-xs-12">
+            <h3>Thông tin liên hệ</h3>
+            <img src="{{asset('google-map.png')}}" width="100%" />
+            <div class="group-icon">
+                <h5>CONTACT US</h5>
+                <div class="group-icon-item"><img src={{asset("img/fb.png")}} width="40px"/></div>
+                <div class="group-icon-item"><img src={{asset("img/ins.png")}} width="40px"/></div>
+                <div class="group-icon-item"><img src={{asset("img/zalo.png")}} width="40px"/></div>
             </div>
         </div>
     </div>

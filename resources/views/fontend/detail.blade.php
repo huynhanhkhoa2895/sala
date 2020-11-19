@@ -74,8 +74,10 @@
 @push('js')
     <script src="{{asset("js/zoom/zoom.min.js")}}"></script>
     <script>
+        let width = $(document).width();
+        console.log(width)
         var options = {
-            width: 400, // required
+            width: ($(document).width() > 400 ? 400 : width-60), // required
             scale: 0.5,
             // zoomWidth: 50,
             zoomContainer: document.getElementById("product-img-zoom-container"),

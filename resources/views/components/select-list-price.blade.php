@@ -1,4 +1,4 @@
-<select class="form-control sala-input">
+<select class="form-control sala-input" id="select-price">
     <option value="0">Chọn giá</option>
     <option value="1500">Thiệp cưới giá 1.500</option>
     <option value="1800">Thiệp cưới giá 1.800</option>

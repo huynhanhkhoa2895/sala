@@ -68,3 +68,18 @@
 .footer .group-icon .group-icon-item{
     display: inline-block;
 }
+.footer-new .info,.footer-new .info a{
+    color: #ccc;
+    font-size: 13px;
+}
+.footer-new .category a{
+    color: #c8ad5b;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.footer-new .info-link a{
+    font-size: 15px;
+    font-weight: 700;
+    display: block;
+    color: #c8ad5b;
+}
