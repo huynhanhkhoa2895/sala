@@ -1,0 +1,27 @@
+.table-checkout .table-product{
+    display: flex;
+}
+.table-checkout .table-product .table-product-img{
+    width: 150px;
+    overflow: hidden;
+}
+.table-checkout .product-update{
+    max-width: 130px;
+    margin: auto;
+}
+.table-checkout .table-product .table-product-img img{
+    width: 100%;
+}
+.table-checkout .table-product .table-product-name{
+    text-transform: capitalize;
+}
+.table-checkout .table-product .table-product-name a{
+    color: #c8ad5b;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.table-checkout .total-price{
+    font-weight: bold;
+    font-size: 18px;
+}

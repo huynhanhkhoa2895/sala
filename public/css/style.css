@@ -36,6 +36,9 @@ body,html{
 .color-w{
     color: #ffffff;
 }
+.pd10{
+    padding: 10px;
+}
 .form-control:focus{
     box-shadow: unset;
     border-color: #ced4da;
@@ -53,6 +56,19 @@ ul>li{
 .sala-input{
     background: #eee;
     border: #eee
+}
+.pagination{
+    justify-content: center;
+}
+.page-link{
+    color: #c8ad5b;
+}
+.page-item.active .page-link{
+    background-color: #c8ad5b;
+    border-color: #c8ad5b;
+}
+.page-link:hover{
+    color: #c8ad5b;
 }
 .icon-filter{
     background: #333333;

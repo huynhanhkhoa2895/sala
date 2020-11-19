@@ -19,7 +19,14 @@ Route::group(["namespace"=>"App\Http\Controllers\Fontend"],function(){
     });
     Route::group(["prefix"=>"cart"],function(){
         Route::post('/add',"Cart@Add");
+        Route::get('/clear',"Cart@Clear");
+        Route::get('/checkout',"Cart@Checkout")->name("cart-checkout");
+        Route::post('/checkout',"Cart@CheckoutPayment")->name("post-checkout");
+        Route::get('/payment',"Cart@Payment")->name("cart-payment");
+        Route::get('/remove/product/{id}',"Cart@RemoveProduct");
     });
-    
+    Route::group(["prefix"=>"loai-thiep"],function(){
+        Route::get('{id}',"Category@index");
+    });
 });
 

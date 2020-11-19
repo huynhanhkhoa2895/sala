@@ -58,16 +58,7 @@
 .product-wrapper .product-content-container .product-cart svg{
     margin-right: 10px;
 }
-.product-wrapper .product-content-container .product-update .input-group input{
-    text-align: center;
-}
-.product-wrapper .product-content-container .product-update .input-group .form-control[readonly]{
-    background: #ffffff;
-}
-.product-wrapper .product-content-container .product-update .input-group span{
-    cursor: pointer;
-    background: #ffffff;
-}
+
 .product-wrapper .product-list-same-style{
     margin-top: 10px;
 }

@@ -1,0 +1,10 @@
+.form-group label{
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #c8ad5b;
+}
+form{
+    max-width: 450px;
+    margin: auto;
+}
