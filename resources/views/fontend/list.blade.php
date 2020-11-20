@@ -8,17 +8,14 @@
             <div class="product-list">
                 <div class="product-list-filter">
                     <div class="row" style="margin-bottom: 20px">
-                        <div class="col">
+                        <div class="col-12 col-md" style="margin-bottom: 10px">
                             <div class="row">
                                 <div class="col">
                                     <x-select-list-color></x-select-list-color>
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
-
-                        </div>
-                        <div class="col">
+                        <div class="col-12 col-md" style="margin-bottom: 10px">
                             <div class="row">
                                 <div class="col">
                                     <x-select-list-price></x-select-list-price>

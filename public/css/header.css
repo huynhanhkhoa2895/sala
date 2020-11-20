@@ -183,4 +183,12 @@
     .header .header-box-info .wrapper-icon.wrapper-cart-header{
         margin-top: 20px;
     }
+
 }
+@media only screen and (max-width: 767px){
+    .carousel-inner{
+        height: auto;
+    }
+
+}
+

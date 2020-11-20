@@ -39,14 +39,14 @@
                 <div class="product-list">
                     <div class="product-list-filter">
                         <div class="row" style="margin-bottom: 20px">
-                            <div class="col">
-                                <div class="row">
+                            <div class="col-12 col-md" style="margin-bottom: 10px">
+                                <div class="row" >
                                     <div class="col">
                                         <x-select-list-color></x-select-list-color>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col">
+                            <div class="col-12 col-md" style="margin-bottom: 10px">
                                 <div class="row">
                                     <div class="col">
                                         <select class="form-control sala-input">
@@ -58,7 +58,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col">
+                            <div class="col-12 col-md">
                                 <div class="row">
                                     <div class="col">
                                         <x-select-list-price></x-select-list-price>
@@ -145,15 +145,15 @@
     </div>
     <div class="intro2">
         <div class="row">
-            <div class="col">
+            <div class="col-md col-12">
                 <span class="fas fa-truck fa-3x"></span>
                 <span class="text">Ship code toàn quốc</span>
             </div>
-            <div class="col">
+            <div class="col-md col-12">
                 <span class="fas fa-money-bill fa-3x"></span>
                 <div class="text" style="width: 80px">Mẫu mã đa dạng</div>
             </div>
-            <div class="col">
+            <div class="col-md col-12">
                 <span class="fas fa-smile fa-3x"></span>
                 <span class="text">Hỗ trợ tư vấn 24/7</span>
             </div>

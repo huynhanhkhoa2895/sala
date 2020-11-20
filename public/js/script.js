@@ -31,7 +31,7 @@ $(document).ready(function(){
 })
 function coverQueryParamToJson(){
     let search = location.search.substring(1);
-    return JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}')
+    return search != null && search != "" ? JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}') : {}
 }
 function searchKey(val){
     document.location.href = window.location.origin+"/search?slug="+val;

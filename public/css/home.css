@@ -140,3 +140,17 @@ button.btn-payment{
     box-shadow: none;
     outline: unset;
 }
+@media only screen and (max-width: 450px){
+    .prodict-list-item{
+        width: 80%;
+        margin: auto;
+    }
+    .prodict-list-item .prodict-list-item-box{
+        width: 100%;
+        margin: 0;
+    }
+    .intro2 .col-12{
+        padding-bottom: 10px;
+        border-bottom: 1px solid;
+    }
+}
