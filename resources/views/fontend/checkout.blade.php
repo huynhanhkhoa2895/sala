@@ -40,15 +40,21 @@
                             </td>
                             <td>
                                 <div class="product-update">
-                                    <div class="product-update-input-group input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" onclick="changeQty(this,'minus')"><span class="fas fa-minus"></span></span>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="product-update-input-group input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" onclick="changeQty(this,'minus')"><span class="fas fa-minus"></span></span>
+                                                </div>
+                                                <input class="form-control qty-input" value="{{$qtys[$item->id]}}" />
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text" onclick="changeQty(this,'plus')"><span class="fas fa-plus"></span>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <input type="number" class="form-control qty-input" value="{{$qtys[$item->id]}}" />
-                                        <div class="input-group-append">
-                                            <span class="input-group-text" onclick="changeQty(this,'plus')"><span class="fas fa-plus"></span>
+                                        <div class="col-12">
+                                            <button class="btn-payment">Cập nhật</button>
                                         </div>
-                                    </div>
                                 </div>
                             </td>
                             <td class="text-center">
