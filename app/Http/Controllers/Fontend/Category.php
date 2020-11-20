@@ -15,10 +15,17 @@ class Category extends Controller
         if(!empty($rq->color)){
             $db->where("color",$rq->color);
         }
-        // if(!empty($rq->price)){
-        //     $db->where("color",$rq->price);
-        // }
-        $data['product']= $db->orderBy("id","desc")->paginate(15);
+        if(!empty($rq->price)){
+            if(is_numeric($rq->price)){
+                $db->where("price","<=",$rq->price);
+                $db->orderBy("id","desc");
+            }else{
+                $db->orderBy("price",$rq->price);
+            }
+        }else{
+            $db->orderBy("id","desc");
+        }
+        $data['product']= $db->paginate(15);
         return view("fontend.list",$data);
     }
 }
