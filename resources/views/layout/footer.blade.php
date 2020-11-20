@@ -98,7 +98,7 @@
             <div class="info-link"><a href="#">Câu hỏi thường gặp</a></div>
             <div class="info-link"><a href="#">Chính sách bảo hành</a></div>
             <div class="info-link"><a href="#">Chính sách bảo mật thông tin</a></div>
-            <div class="info-link"><a href="#"><img src="{{asset("img/bcs.png")}}" width="100%" /></a></div>
+            <div class="info-link"><a href="#"><img src="{{asset("img/bcs.png")}}" width="100px" /></a></div>
         </div>
         <div class="col-md-3 col-xs-12">
             <h3>Thông tin liên hệ</h3>

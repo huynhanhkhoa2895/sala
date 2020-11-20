@@ -9,6 +9,8 @@ use App\Models\Wedding_invitation as Model;
 use App\Models\Order as Order;
 use App\Models\OrderDetail as OrderDetail;
 use Illuminate\Support\Facades\Validator;
+use Session;
+
 class Cart extends Controller
 {
     //
@@ -19,7 +21,7 @@ class Cart extends Controller
         foreach($carts as $cart){
             if($cart['id'] == $rq->id){
                 $check = false;
-                $cart['qty'] += 1;
+                $cart['qty'] += $rq->qty;
             }
             array_push($new_cart,$cart);
         }
@@ -36,6 +38,20 @@ class Cart extends Controller
             ];
             $rq->session()->push('cart', $cart);
         }
+        Session::flash('msg', 'Cập nhập giỏ hàng thành công'); 
+        return response()->json($rq->session()->get('cart'));
+    }
+    function Update(Request $rq){
+        $carts = $rq->session()->get("cart",[]);
+        $new_cart = [];
+        foreach($carts as $cart){
+            if($cart['id'] == $rq->id){
+                $cart['qty'] = $rq->qty;
+            }
+            array_push($new_cart,$cart);
+        }
+        $rq->session()->put('cart', $new_cart);
+        Session::flash('msg', 'Cập nhập giỏ hàng thành công'); 
         return response()->json($rq->session()->get('cart'));
     }
     function Clear(Request $request){
@@ -54,7 +70,7 @@ class Cart extends Controller
         }
         $data['product'] = Model::whereIn("id",$id)->get();
         $data['qtys'] = $qtys;
-        return view("fontend.checkout",$data);
+        return view("fontend.checkout",$data)->with("msg","Thêm giỏ hàng thành công");
     }
     function RemoveProduct(Request $request){
         return redirect()->route("cart-checkout");
@@ -64,10 +80,6 @@ class Cart extends Controller
         if(empty($carts)){
             return redirect(url("/"));
         }
-        // foreach($carts as $cart){
-        //     array_push($id,$cart['id']);
-        //     $qtys[$cart['id']] = $cart['qty'];
-        // }
         return view("fontend.payment");
     }
     function CheckoutPayment(Request $request){

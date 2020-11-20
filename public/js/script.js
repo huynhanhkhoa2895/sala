@@ -1,4 +1,7 @@
+
+var audio = document.getElementById("music");
 $(document).ready(function(){
+    audio.volume = 0.3;
     let param = coverQueryParamToJson();
     if(param['color'] != null) $("#select-color").val(param['color'])
     if(param['price'] != null) $("#select-price").val(param['price'])
@@ -31,7 +34,7 @@ $(document).ready(function(){
 })
 function coverQueryParamToJson(){
     let search = location.search.substring(1);
-    return search != null && search != "" ? JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}') : {}
+    return search == null || search == ""  ? {} : JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}')
 }
 function searchKey(val){
     document.location.href = window.location.origin+"/search?slug="+val;
@@ -67,4 +70,34 @@ function addToCart(id){
             window.location.reload();
         }
     })
+}
+function updateCart(it,id){
+    const url = window.location.origin+"/cart/update";
+    const qty = $(it).closest(".product-update").find(".qty-input").val();
+    if(isNaN(qty)){
+        alert("Ô nhập phải để số")
+        return false
+    }else{
+        $.ajax({
+            url: url,
+            method : "put",
+            type: "put",
+            headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+            data: {id : id,qty : qty},
+            success: function(){
+                window.location.reload();
+            }
+        })
+    }
+}
+function scrollToTop(){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+function toogleMusic(){
+    if(audio.volume > 0){
+        audio.volume = 0
+    }else{
+        audio.volume = 0.3
+    }
 }

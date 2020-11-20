@@ -22,6 +22,7 @@ Route::group(["namespace"=>"App\Http\Controllers\Fontend"],function(){
     });
     Route::group(["prefix"=>"cart"],function(){
         Route::post('/add',"Cart@Add");
+        Route::put('/update',"Cart@Update");
         Route::get('/clear',"Cart@Clear");
         Route::get('/checkout',"Cart@Checkout")->name("cart-checkout");
         Route::post('/checkout',"Cart@CheckoutPayment")->name("post-checkout");

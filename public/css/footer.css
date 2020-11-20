@@ -3,6 +3,10 @@
     padding: 20px;
     color: #fff;
 }
+.footer-new{
+    width: 70%;
+    margin: auto;
+}
 .footer .footer-intro .title{
     font-size: 30px;
     text-transform: uppercase;
@@ -82,4 +86,9 @@
     font-weight: 700;
     display: block;
     color: #c8ad5b;
+}
+@media only screen and (max-width: 575px){
+    .footer-new{
+        width: 100%;
+    }
 }

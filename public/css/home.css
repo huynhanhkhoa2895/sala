@@ -140,7 +140,7 @@ button.btn-payment{
     box-shadow: none;
     outline: unset;
 }
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 575px){
     .prodict-list-item{
         width: 80%;
         margin: auto;
@@ -153,4 +153,25 @@ button.btn-payment{
         padding-bottom: 10px;
         border-bottom: 1px solid;
     }
+    .product-list-kind{
+        max-width: unset;
+        width: 100%;
+    }
+}
+.background-icon{
+    position: fixed;
+    bottom: 30px;
+    z-index: 10;
+    right: 20px;
+    text-align: center;
+    color: #fff;
+}
+.background-icon .background-icon-item{
+    width: 50px;
+    height: 50px;
+    background: #c8ad5b;
+    border-radius: 100%;
+    padding-top: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
 }

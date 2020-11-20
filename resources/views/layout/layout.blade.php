@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Thiệp</title>
+    <link href="{{asset("css/snow.css")}}" rel="stylesheet" />
     <link href="{{asset("css/style.css")}}" rel="stylesheet" />
     <link href="{{asset("css/header.css")}}" rel="stylesheet" />
     <link href="{{asset("css/footer.css")}}" rel="stylesheet" />
@@ -29,6 +30,20 @@
             @include('layout.footer')
         </footer>
     </section>
+    <div class="background-snow">
+        <div class="snow"></div>
+    </div>
+    <div class="background-icon">
+        <div class="background-icon-item" onclick="scrollToTop()">
+            <span class="fas fa-arrow-up fa-2x"></span>
+        </div>
+        <div class="background-icon-item" onclick="toogleMusic()">
+            <span class="fas fa-volume-up fa-2x"></span>
+            <audio id="music" controls loop autoplay style="display: none">
+                <source src="{{asset("music.mp3")}}" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
     @include("layout.script")
 </body>
 

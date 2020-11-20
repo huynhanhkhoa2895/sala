@@ -8,6 +8,9 @@
     @endphp
     <div class="row" style="padding-top: 10px">
         <div class="col-12">
+            @if (session('msg'))
+                <div class="alert alert-success">{{session('msg')}}</div>
+            @endif
             <table class="table table-bordered table-hover table-checkout">
                 <thead>
                     <tr>
@@ -53,8 +56,9 @@
                                             </div>
                                         </div>
                                         <div class="col-12">
-                                            <button class="btn-payment">Cập nhật</button>
+                                            <button style="width: 100%" class="btn-payment" onclick="updateCart(this,{{$item->id}})">Cập nhật</button>
                                         </div>
+                                    </div>
                                 </div>
                             </td>
                             <td class="text-center">

@@ -5,6 +5,9 @@
 @section('content')
     <div class="container">
         <div class="product-wrapper">
+            @if (session('msg'))
+                <div class="alert alert-success">{{session('msg')}}</div>
+            @endif
             <div class="row">
                 <div class="col-md-6 ">
                     <div class="product-img-container">
@@ -29,7 +32,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" onclick="changeQty(this,'minus')"><span class="fas fa-minus"></span></span>
                                     </div>
-                                    <input id="input-qty" type="text" class="form-control qty-input" value="1" readonly />
+                                    <input id="input-qty" type="text" class="form-control qty-input" value="{{$qty}}" readonly />
                                     <div class="input-group-append">
                                         <span class="input-group-text" onclick="changeQty(this,'plus')"><span class="fas fa-plus"></span>
                                     </div>
