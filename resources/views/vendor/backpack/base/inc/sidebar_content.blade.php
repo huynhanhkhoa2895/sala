@@ -5,3 +5,5 @@
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('wedding_invitation') }}'><i class='nav-icon la la-question'></i> Wedding_invitations</a></li>
 
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('kind') }}'><i class='nav-icon la la-question'></i> Kinds</a></li>
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('order') }}'><i class='nav-icon la la-question'></i> Orders</a></li>
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('order_detail') }}'><i class='nav-icon la la-question'></i> Order_details</a></li>

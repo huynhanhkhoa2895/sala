@@ -83,8 +83,8 @@
         <div class="col-md-3 col-xs-12">
             <h3>THIỆP CƯỚI SALA</h3>
             <div class="info"><span class="fas fa-share"></span> CÔNG TY TNHH IN BAO BÌ SALA THIỆP CƯỚI SALA</div>
-            <div class="info"><a href="#0333135735"><span class="fas fa-phone-square"></span> 0333.135.735</a></div>
-            <div class="info"><a href="#090700008"><span class="fas fa-phone-square"></span> 090700008</a></div>
+            <div class="info"><a href="tel:0333135735"><span class="fas fa-phone-square"></span> 0333.135.735</a></div>
+            <div class="info"><a href="tel:090700008"><span class="fas fa-phone-square"></span> 090700008</a></div>
             <div class="info"><a href="#THIEPCUOISALA123@GMAIL.COM"><span class="fas fa-envelope"></span> Email: congtyin.ads@gmail.com</a></div>
         </div>
         <div class="col-md-3 col-xs-12">
