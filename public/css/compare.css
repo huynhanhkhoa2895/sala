@@ -1,0 +1,29 @@
+.compare-product{
+    padding-top: 20px;
+}
+.compare-product{
+    margin: auto;
+}
+.compare-product .img-product{
+    max-width: 350px;
+    margin: auto;
+    overflow: hidden;
+}
+.compare-product .img-product img{
+    width: 100%;
+}
+.compare-product .content-product .product-name {
+    text-align: center;
+}
+.compare-product .content-product .product-name a{
+    text-align: center;
+    font-size: 24px;
+}
+.compare-product .content-product .product-price{
+    text-align: center;
+    font-size: 18px;
+}
+.compare-product .content-product .product-style{
+    color: #ccc;
+    font-size: 13px;
+}

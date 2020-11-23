@@ -24,4 +24,10 @@ class Product extends Controller
         }
         return view("fontend.detail",$data);
     }
+    function compare(Request $rq){
+        $detail = Model::join("style","wedding_invitation.style","=","style.id")->where("slug",$rq->slug)->select(DB::raw("wedding_invitation.*,style.content as style_name"))->first();
+        $data['products'] = Model::where("id","!=",$detail->id)->get();
+        $data['product'] = $detail;
+        return view("fontend.compare",$data);
+    }
 }

@@ -41,6 +41,9 @@
                             <div class="product-cart">
                                 <a href="javascript:void(0)" onclick="addToCart({{$product->id}})"><span class="fas fa-shopping-cart"></span>Mua hàng</a>
                             </div>
+                            <div class="pd0">
+                                <a style="color: #c8ad5b;text-decoration: none" href="{{url("thiep/so-sanh/".$product->slug)}}" class="btn btn-link pdl0 font-weight-bold"><span class="fas fa-plus"></span> So Sánh Với Sản Phẩm Khác</a>
+                            </div>
                         </div>
                     </div>
                 </div>

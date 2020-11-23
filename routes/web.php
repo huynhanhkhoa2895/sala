@@ -16,6 +16,7 @@ Route::group(["namespace"=>"App\Http\Controllers\Fontend"],function(){
     Route::get('/',"Home@index");
     Route::group(["prefix"=>"thiep"],function(){
         Route::get('{slug}',"Product@detail");
+        Route::get('so-sanh/{slug}',"Product@compare");
     });
     Route::group(["prefix"=>"search"],function(){
         Route::get('/',"Search@index");
