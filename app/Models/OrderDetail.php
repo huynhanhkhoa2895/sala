@@ -8,7 +8,8 @@ use Backpack\CRUD\app\Models\Traits\CrudTrait;
 
 class OrderDetail extends Model
 {
-    protected $table = 'order_detail';
     use CrudTrait;
     use HasFactory;
+    protected $table = 'order_detail';
+
 }

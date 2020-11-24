@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Requests\OrderRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
-
+use Route;
 /**
  * Class OrderCrudController
  * @package App\Http\Controllers\Admin
@@ -83,10 +83,36 @@ class OrderCrudController extends CrudController
     protected function setupUpdateOperation(){
         $this->setupCreateOperation();
     }
+    protected function setupDetailRoutes($segment, $routeName, $controller){
+        Route::get($segment.'/{id}/detail', [
+            'as'        => $routeName.'.detail',
+            'uses'      => $controller.'@detail',
+            'operation' => 'detail',
+        ]);
+        Route::post($segment.'/{id}/detail/search', [
+            'as'        => $routeName.'.detailSearch',
+            'uses'      => $controller.'@detailSearch',
+            'operation' => 'detail',
+        ]);
+    }
     // protected function setupShowOperation(){
     //     $this->crud->set('show.setFromDb', false);
     //     $this->crud->setListView('vendor.backpack.order_detail');
     //     CRUD::addColumn('prices');
     // }
+    protected function setupDetailOperation(){
+        $this->crud->setDefaultPageLength(10);
+        $this->crud->setPageLengthMenu([[10, 20,"backpack::crud.all"]]);
+        CRUD::setFromDb();
 
+    }
+    function detail(){
+        // prepare the fields you need to show
+        
+        $this->data['crud'] = $this->crud;
+        $this->data['title'] = $this->crud->getTitle() ?? 'detail '.$this->crud->entity_name;
+        // return view("vendor.backpack.order_detail", $this->data);
+        // dd($this->crud->getListView());
+        return view("list", $this->data);
+    }
 }

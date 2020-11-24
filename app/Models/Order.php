@@ -12,6 +12,6 @@ class Order extends Model
     use HasFactory;
     protected $table = 'order';
     public function openGoogle($crud = false){
-        return '<a class="btn btn-sm btn-link" target="_blank" href="'.url("admin/order/detail/$this->id").'" ><i class="la la-search"></i> Chi tiết</a>';
+        return '<a class="btn btn-sm btn-link" target="_blank" href="'.url("admin/order/".$this->id."/detail/").'" ><i class="la la-search"></i> Chi tiết</a>';
     }
 }

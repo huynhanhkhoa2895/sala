@@ -3,7 +3,7 @@
 @php
     $widgets['before_content'][] = [
         'type'        => 'jumbotron',
-        'heading'     => trans('backpack::base.welcome'),
+        'heading'     => trans('backpack::base.list'),
         'content'     => trans('backpack::base.use_sidebar'),
         'button_link' => backpack_url('logout'),
         'button_text' => trans('backpack::base.logout'),

@@ -6,3 +6,4 @@
 
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('order') }}'><i class='nav-icon la la-question'></i> Hóa đơn</a></li>
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('news') }}'><i class='nav-icon la la-question'></i> Tin tức</a></li>
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('orderdetail') }}'><i class='nav-icon la la-question'></i> Orderdetails</a></li>
