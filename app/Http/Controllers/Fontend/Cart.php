@@ -15,6 +15,10 @@ class Cart extends Controller
 {
     //
     function Add(Request $rq){
+        if(!is_numeric($rq->qty)){
+            Session::flash('msg', 'Số lượng phải là số ko phải chữ');
+            return false;
+        }
         $carts = $rq->session()->get("cart",[]);
         $check = true;
         $new_cart = [];

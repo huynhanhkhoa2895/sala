@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::group(["namespace"=>"App\Http\Controllers\Fontend"],function(){
     Route::get('/',"Home@index");
+    Route::get('/compare/ajax',"Product@compareAjax");
     Route::group(["prefix"=>"thiep"],function(){
         Route::get('{slug}',"Product@detail");
         Route::get('so-sanh/{slug}',"Product@compare");

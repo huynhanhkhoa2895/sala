@@ -32,14 +32,14 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" onclick="changeQty(this,'minus')"><span class="fas fa-minus"></span></span>
                                     </div>
-                                    <input id="input-qty" type="text" class="form-control qty-input" value="{{$qty}}" readonly />
+                                    <input id="input-qty" type="text" class="form-control qty-input" value="{{$qty}}" />
                                     <div class="input-group-append">
                                         <span class="input-group-text" onclick="changeQty(this,'plus')"><span class="fas fa-plus"></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="product-cart">
-                                <a href="javascript:void(0)" onclick="addToCart({{$product->id}})"><span class="fas fa-shopping-cart"></span>Mua hàng</a>
+                                <a href="javascript:void(0)" onclick="addToCart({{$product->id}})"><span class="fas fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
                             </div>
                             <div class="pd0">
                                 <a style="color: #c8ad5b;text-decoration: none" href="{{url("thiep/so-sanh/".$product->slug)}}" class="btn btn-link pdl0 font-weight-bold"><span class="fas fa-plus"></span> So Sánh Với Sản Phẩm Khác</a>
@@ -85,7 +85,7 @@
         var options = {
             width: ($(document).width() > 400 ? 400 : width-60), // required
             scale: 0.5,
-            // zoomWidth: 50,
+            zoomWidth: 600,
             zoomContainer: document.getElementById("product-img-zoom-container"),
             // zoomPosition: 'left',
             zoomPosition: 'right',

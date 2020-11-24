@@ -30,4 +30,9 @@ class Product extends Controller
         $data['product'] = $detail;
         return view("fontend.compare",$data);
     }
+    function compareAjax(Request $rq){
+        $detail = Model::join("style","wedding_invitation.style","=","style.id")->where("wedding_invitation.id",$rq->id)->select(DB::raw("wedding_invitation.*,style.content as style_name"))->first();
+        $data['product'] = $detail;
+        return view("fontend.compare-ajax",$data);
+    }
 }
