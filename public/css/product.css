@@ -85,3 +85,14 @@
     font-weight: 700;
     text-decoration: underline;
 }
+@media only screen and (max-width: 575px){
+    .product-wrapper .product-img{
+        height: auto;
+    }
+    .product-wrapper .product-img img{
+        height: auto !important;
+    }
+    .product-contact .product-contact-info{
+        width: auto;
+    }
+}
