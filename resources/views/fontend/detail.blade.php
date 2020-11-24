@@ -44,6 +44,15 @@
                             <div class="pd0">
                                 <a style="color: #c8ad5b;text-decoration: none" href="{{url("thiep/so-sanh/".$product->slug)}}" class="btn btn-link pdl0 font-weight-bold"><span class="fas fa-plus"></span> So Sánh Với Sản Phẩm Khác</a>
                             </div>
+                            <div class="product-contact">
+                                <div class="product-contact-info">
+                                    <div>1.Giá áp dụng in 300 thiệp 1 nội dung</div>
+                                    <div>2.Giá chưa bao gồm in bản đồ.</div>
+                                    <div>3.Số lượng dưới 200, Không nhận in.</div>
+                                    <div>4. Liên hệ Zalo để được hỗ trợ tốt nhất</div>
+                                    <p><a href="tel:0907000008">0907.000.008</a></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

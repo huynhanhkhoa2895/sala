@@ -69,3 +69,19 @@
     width: 600px !important;
     height: 350px !important;
 }
+.product-contact{
+    margin: auto;
+}
+.product-contact .product-contact-info{
+    width: max-content;
+    padding: 20px 40px;
+    text-align: center;
+    background: #c8ad5b;
+    color: #ffffff;
+    border-radius: 10px;
+}
+.product-contact .product-contact-info p a{
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: underline;
+}

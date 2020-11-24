@@ -9,8 +9,8 @@
             <div class="compare-select">
                 <select id="select-compare" class="form-control center-block" style="width : 250px;margin: auto">
                     <option value="0">--- Mời chọn sản phẩm</option>
-                    @foreach($products as $product)
-                        <option value="{{$product->id}}">{{$product->name}}</option>
+                    @foreach($products as $_product)
+                        <option value="{{$_product->id}}">{{$_product->name}}</option>
                     @endforeach
                 </select>
             </div>
