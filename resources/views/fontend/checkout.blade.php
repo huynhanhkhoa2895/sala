@@ -5,6 +5,7 @@
 @section('content')
     @php
         $total = 0;
+        $totalQty = 0;
     @endphp
     <div class="row" style="padding-top: 10px">
         <div class="col-12">
@@ -24,6 +25,7 @@
                     @foreach($product as $item)
                         @php
                             $total += $item->price*$qtys[$item->id];
+                            $totalQty += $qtys[$item->id];
                         @endphp
                         <tr>
                             <td>
@@ -70,6 +72,24 @@
                 <tfoot>
                     <tr>
                         <td colspan="3">
+                            <div class="total-price">Phụ thu</div>
+                        </td>
+                        <td class="text-center">
+                            <div class="total-price ">
+                                @if($totalQty < 300 && $totalQty >= 200)
+                                    @php $total += 50000 @endphp
+                                    {{number_format(50000)}}
+                                @elseif($totalQty < 200)
+                                    @php $total += 100000 @endphp
+                                    {{number_format(100000)}}
+                                @else
+                                    {{0}}
+                                @endif
+                            VND</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
                             <div class="total-price">Tổng tiền</div>
                         </td>
                         <td class="text-center">
@@ -78,6 +98,12 @@
                     </tr>
                 </tfoot>
             </table>
+        </div>
+    </div>
+    <div class="row" style="padding-bottom: 10px">
+        <div class="col-12 text-right">
+            <p style="color: red"><i>* Nếu quý khách đặt dưới 300 thiệp sẽ phụ thu 50k</i></p>
+            <p style="color: red"><i>* Nếu quý khách đặt dưới 200 thiệp sẽ phụ thu 100k</i></p>
         </div>
     </div>
     <div class="row" style="padding-bottom: 10px">

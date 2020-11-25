@@ -5,12 +5,13 @@
     margin: auto;
 }
 .compare-product .img-product{
-    max-width: 350px;
+    max-width: 500px;
     margin: auto;
     overflow: hidden;
 }
 .compare-product .img-product img{
     width: 100%;
+    height: 100%;
 }
 .compare-product .content-product .product-name {
     text-align: center;
@@ -24,6 +25,29 @@
     font-size: 18px;
 }
 .compare-product .content-product .product-style{
-    color: #ccc;
+    color: #756565;
     font-size: 13px;
+    text-align: center;
+}
+.js-image-zoom__zoomed-image{
+    width: 600px !important;
+    height: 350px !important;
+}
+.product-img-zoom-container{
+    z-index: 100;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.ajax-compare-product .product-img-zoom-container{
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+@media only screen and (max-width: 500px){
+    .compare-product .img-product{
+        max-width: 100%;
+        height: auto;
+    }
 }

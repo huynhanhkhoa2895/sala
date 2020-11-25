@@ -123,7 +123,7 @@
                     <p>Số lượng ít hơn hoặc chia tách nhỏ số lượng sẽ tính phí</p>
                     <p>Số lượng dưới 200, vui lòng liên hệ Zalo</p>
                     <p>Giá chưa bao gồm bản đồ</p>
-                    <p>Thời gian in: 8-10 ngày (Tùy mẫu)</p>
+                    <p>Thời gian in: 3-5 ngày (Tùy mẫu)</p>
                     <p>Không in được: hình CDCR, tiếng hoa và mẫu thiết kế riêng</p>
                 </div>
                 <div class="contact text-center" id="contact">

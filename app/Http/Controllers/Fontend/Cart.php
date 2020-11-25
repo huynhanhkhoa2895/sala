@@ -100,9 +100,16 @@ class Cart extends Controller
         ])->validate();
         $carts = $request->session()->get("cart",[]);
         $total = 0;
+        $totalQty = 0;
         foreach($carts as $cart){
             array_push($id,$cart['id']);
             $qtys[$cart['id']] = $cart['qty'];
+            $totalQty += $cart['qty'];
+        }
+        if($totalQty < 300 && $totalQty >=200){
+            $total = 50000;
+        }else if($totalQty < 200){
+            $total = 100000;
         }
         $data['product'] = Model::whereIn("id",$id)->get();
         foreach($data['product'] as $product){

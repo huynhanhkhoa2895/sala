@@ -14,9 +14,7 @@
                         <div class="product-img" id="product-img">
                             <img src="{{asset("img/product/".$product->image)}}" alt="{{$product->name}}" />
                         </div>
-                        <div class="product-img-zoom-container" id="product-img-zoom-container">
-                                
-                        </div>
+                        <div class="product-img-zoom-container" id="product-img-zoom-container"></div>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -90,7 +88,6 @@
     <script src="{{asset("js/zoom/zoom.min.js")}}"></script>
     <script>
         let width = $(document).width();
-        console.log(width)
         var options = {
             width: ($(document).width() > 400 ? 400 : width-60), // required
             scale: 0.5,
