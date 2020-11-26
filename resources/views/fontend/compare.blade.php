@@ -46,7 +46,7 @@
     <script>
         let width = $(document).width();
         var options = {
-            width: ($(document).width() > 500 ? 500 : "100%"), // required
+            width: ($(document).width() > 500 ? 500 : width - 60), // required
             zoomContainer: document.getElementById("product-img-zoom-container"),
             // zoomPosition: 'left',
             zoomPosition: 'right',

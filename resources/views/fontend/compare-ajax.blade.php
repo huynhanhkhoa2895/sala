@@ -11,9 +11,9 @@
 </div>
 <script>
     $(document).ready(function(){
-        let width = $(document).width();
+        let width2 = $(document).width();
         var options = {
-            width: ($(document).width() > 500 ? 500 : "100%"), // required
+            width: ($(document).width() > 500 ? 500 : width2 - 60), // required
             zoomContainer: document.getElementById("product-img-zoom-container-compare"),
             // zoomPosition: 'left',
             zoomPosition: 'left',

@@ -29,9 +29,12 @@
     font-size: 13px;
     text-align: center;
 }
+.js-image-zoom__zoomed-area{
+    display: none !important;
+}
 .js-image-zoom__zoomed-image{
-    width: 600px !important;
-    height: 350px !important;
+    width: 350px !important;
+    height: 200px !important;
 }
 .product-img-zoom-container{
     z-index: 100;
