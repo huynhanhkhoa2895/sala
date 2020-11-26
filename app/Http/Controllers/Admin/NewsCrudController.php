@@ -40,7 +40,15 @@ class NewsCrudController extends CrudController
     protected function setupListOperation()
     {
         CRUD::setFromDb();
-
+        CRUD::removeColumn('content');
+        CRUD::modifyColumn('img',
+            [
+                'label' => "Hình ảnh",
+                'type' => 'image',
+                'prefix' => 'img/news/',
+            ],
+            
+        );
         /**
          * Columns can be defined using the fluent syntax or array syntax:
          * - CRUD::column('price')->type('number');
@@ -57,8 +65,14 @@ class NewsCrudController extends CrudController
     protected function setupCreateOperation()
     {
         CRUD::setValidation(NewsRequest::class);
+
         CRUD::setFromDb();
-        
+        $this->crud->removeField("slug");
+        $this->crud->modifyField("img",[
+            'type' => 'image',
+            'aspect_ratio' => 1,
+            'label' => 'Hình sản phẩm',
+        ],);
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

@@ -89,7 +89,6 @@ class Wedding_invitationCrudController extends CrudController
 
         CRUD::addField(
             [
-                'name' => 'image',
                 'name' => "image",
                 'type' => 'image',
                 'aspect_ratio' => 1,
@@ -114,9 +113,21 @@ class Wedding_invitationCrudController extends CrudController
         CRUD::addField(
             [
                 'label' => 'Màu sắc',
-                'name' => 'colors',
+                'name' => 'color',
                 'type' => 'relationship',
+                'entity' => 'colors', 
+                'model' => "App\Models\Color",
                 'placeholder' => "Lựa chọn màu",
+            ],
+        );
+        CRUD::addField(
+            [
+                'label' => 'Kiểu',
+                'name' => 'style',
+                'type' => 'relationship',
+                'entity' => 'styles', 
+                'model' => "App\Models\Style",
+                'placeholder' => "Lựa chọn kiểu",
             ],
         );
         /**
