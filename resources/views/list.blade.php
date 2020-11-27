@@ -87,8 +87,8 @@
                     <tr>
                       <td><img src="{{asset("img/product/".$product->image)}}" width="100px"/></td>
                       <td>{{$product->name}}</td>
-                      <td>{{$product->qty}}</td>
                       <td>{{$product->sub_price}}</td>
+                      <td>{{$product->qty}}</td>
                     </tr>
                   @endforeach
                 </tbody>
