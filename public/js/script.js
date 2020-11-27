@@ -1,7 +1,12 @@
 
 var audio = document.getElementById("music");
+// document.getElementById("music").autoplay
+// document.getElementById('music').autoplay = true;
+console.log(`audio`,$(audio))
+
 $(document).ready(function(){
     audio.volume = 0.3;
+
     let param = coverQueryParamToJson();
     if(param['color'] != null) $("#select-color").val(param['color'])
     if(param['price'] != null) $("#select-price").val(param['price'])
@@ -95,9 +100,10 @@ function scrollToTop(){
     document.documentElement.scrollTop = 0;
 }
 function toogleMusic(){
-    if(audio.volume > 0){
-        audio.volume = 0
-    }else{
-        audio.volume = 0.3
+    if (audio.duration > 0 && !audio.paused) {
+        audio.pause()
+    
+    } else {
+        audio.play()
     }
 }

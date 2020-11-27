@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-md-7">
                     <div class="header-box">
-                        <div class="name-company">CÔNG TY TNHH IN BAO BÌ SALA THIỆP CƯỚI SALA</div>
+                        <div class="name-company">CÔNG TY TNHH IN BAO BÌ THIỆP CƯỚI SALA</div>
                         <div class="info">79 Đông Hưng Thuận 05, Phường Tân Hưng Thuận, Quận 12, Tp.HCM</div>
                         <div class="info"><a style="color: #fff" href="tel:0333135735">0333.135.735</a> - <a style="color: #fff" href="tel:0907000008">0907.000.008</a></div>
                     </div>
