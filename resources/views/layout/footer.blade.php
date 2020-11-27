@@ -102,7 +102,7 @@
         </div>
         <div class="col-md-3 col-xs-12">
             <h3>Thông tin liên hệ</h3>
-            <img src="{{asset('google-map.png')}}" width="100%" />
+            <a href="https://www.google.com/maps/place/79+%C4%90%C3%B4ng+H%C6%B0ng+Thu%E1%BA%ADn+5,+%C4%90%C3%B4ng+H%C6%B0ng+Thu%E1%BA%ADn,+Qu%E1%BA%ADn+12,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.8394566,106.619786,20.25z/data=!4m5!3m4!1s0x31752a2d03a6a58b:0x11601136a0cb9149!8m2!3d10.8394399!4d106.6198416" target="__blank"><img src="{{asset('google-map.png')}}" width="100%" /></a>
             <div class="group-icon">
                 <h5>CONTACT US</h5>
                 <div class="group-icon-item"><img src={{asset("img/fb.png")}} width="40px"/></div>

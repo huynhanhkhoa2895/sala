@@ -47,12 +47,11 @@
             </audio>
         </div>
     </div>
-    <script>
-        // $('#music').prop('muted', true);
-        // $('#music').on('canplay', function() {
-        //     this.play();
-        // });
-    </script>
+    <div class="background-messenger">
+        <a href="https://www.facebook.com/Thiepcuoisalahcm/">
+            <img src="{{asset("messenger.png")}}" alt="thiệp cưới sala" />
+        </a>
+    </div>
     @include("layout.script")
 </body>
 

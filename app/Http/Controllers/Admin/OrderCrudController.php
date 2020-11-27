@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\OrderRequest;
+use Illuminate\Http\Request;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
+use App\Models\OrderDetail;
 use Route;
 /**
  * Class OrderCrudController
@@ -103,16 +105,19 @@ class OrderCrudController extends CrudController
     protected function setupDetailOperation(){
         $this->crud->setDefaultPageLength(10);
         $this->crud->setPageLengthMenu([[10, 20,"backpack::crud.all"]]);
-        CRUD::setFromDb();
-
+        $this->crud->removeAllButtonsFromStack('line');
+        CRUD::addColumn(['name' => 'name', 'type' => 'text']);
+        CRUD::addColumn(['name' => 'image', 'type' => 'text']);
+        CRUD::addColumn(['name' => 'sub_price', 'type' => 'text']);
+        CRUD::addColumn(['name' => 'qty', 'type' => 'text']);
+        CRUD::removeColumn("action");
     }
-    function detail(){
+    function detail(Request $rq){
         // prepare the fields you need to show
         
         $this->data['crud'] = $this->crud;
         $this->data['title'] = $this->crud->getTitle() ?? 'detail '.$this->crud->entity_name;
-        // return view("vendor.backpack.order_detail", $this->data);
-        // dd($this->crud->getListView());
+        $this->data['products'] = OrderDetail::join("wedding_invitation","wedding_invitation.id","=","order_detail.product")->where("order",$rq->id)->select("wedding_invitation.name","wedding_invitation.image","order_detail.sub_price","order_detail.qty")->get();
         return view("list", $this->data);
     }
 }
