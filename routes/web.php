@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::group(["namespace"=>"App\Http\Controllers\Fontend"],function(){
+Route::group(["namespace"=>"App\Http\Controllers\Fontend","middleware"=>["ssl"]],function(){
     Route::get('/',"Home@index");
     Route::get('/compare/ajax',"Product@compareAjax");
     Route::group(["prefix"=>"thiep"],function(){
