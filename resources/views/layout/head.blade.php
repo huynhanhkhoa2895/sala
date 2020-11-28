@@ -23,7 +23,7 @@
                                         <div class="icon">
                                             <span class="fas fa-phone fa-2x"></span>
                                         </div>
-                                        <div class="icon-content" style="left: 25px;min-width: 130px" >Liên hệ ngay</div>
+                                        <div class="icon-content" style="left: 25px;min-width: 130px" ><a href="tel:0907000008">Liên hệ ngay</a></div>
                                     </div>
                                     <div class="wrapper-icon wrapper-cart-header">
                                         <div class="icon">

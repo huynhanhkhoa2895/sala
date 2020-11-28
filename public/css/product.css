@@ -96,7 +96,7 @@
         height: auto;
     }
     .product-wrapper .product-img img{
-        height: auto !important;
+        height: 260px !important;
     }
     .product-contact .product-contact-info{
         width: auto;

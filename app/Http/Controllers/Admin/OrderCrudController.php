@@ -49,7 +49,10 @@ class OrderCrudController extends CrudController
         $this->crud->removeButton("show");
         $this->crud->removeButton("delete");
         $this->crud->removeButton("update");
+        $this->crud->addColumn("id");
         CRUD::setFromDb();
+        $this->crud->removeColumn("total");
+        $this->crud->addColumn("total");
         /**
          * Columns can be defined using the fluent syntax or array syntax:
          * - CRUD::column('price')->type('number');
