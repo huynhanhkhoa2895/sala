@@ -39,10 +39,16 @@
 
 }
 .product-wrapper .product-content-container .product-price{
-    color: #c8ad5b;
+    
     text-transform: uppercase;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 500;
+    color: #c8ad5b;
+}
+.product-wrapper .product-content-container .product-price span{
+    font-size: 18px;
+    font-weight: 700;
+    color: #c8ad5b;
 }
 .product-wrapper .product-content-container .product-update{
     width: 150px;

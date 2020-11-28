@@ -24,13 +24,14 @@
                             <div class="product-style">Loại thiệp: {{$product->style_name}}</div>
                         </div>
                         <div class="product-content-container-item">
-                            <div class="product-price">{{number_format($product->price)}} VND</div>
+                            <div id="price" data-price="{{$product->price}}" class="product-price">Đơn giá: <span>{{number_format($product->price)}} VND</span></div>
+                            <div class="product-price">Tổng giá: <span id="sub_price">{{number_format($product->price*$qty)}} VND</span></div>
                             <div class="product-update">
                                 <div class="product-update-input-group input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" onclick="changeQty(this,'minus')"><span class="fas fa-minus"></span></span>
                                     </div>
-                                    <input id="input-qty" type="text" class="form-control qty-input" value="{{$qty}}" />
+                                    <input id="input-qty" type="text" class="form-control qty-input" value="{{$qty}}" onkeyup="InputQtyHandleChange()" />
                                     <div class="input-group-append">
                                         <span class="input-group-text" onclick="changeQty(this,'plus')"><span class="fas fa-plus"></span>
                                     </div>
