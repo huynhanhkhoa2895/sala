@@ -40,7 +40,7 @@ class StyleCrudController extends CrudController
     protected function setupListOperation()
     {
         CRUD::setFromDb(); // columns
-
+        CRUD::modifyColumn("img",['type' => 'image','prefix' => 'img/style/']); 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
          * - CRUD::column('price')->type('number');
@@ -59,7 +59,8 @@ class StyleCrudController extends CrudController
         CRUD::setValidation(StyleRequest::class);
 
         CRUD::setFromDb(); // fields
-
+        CRUD::modifyField("content",['type' => 'text','label' => 'Tiêu đề']); 
+        CRUD::modifyField("img",['type' => 'image','aspect_ratio' => 1,'label' => 'Hình Style',]); 
         /**
          * Fields can be defined using the fluent syntax or array syntax:
          * - CRUD::field('price')->type('number');
