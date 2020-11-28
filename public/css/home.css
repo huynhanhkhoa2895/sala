@@ -177,8 +177,12 @@ button.btn-payment{
 }
 @media only screen and (max-width: 575px){
     .prodict-list-item{
-        width: 80%;
+        width: 100%;
+        padding: 0;
         margin: auto;
+    }
+    .prodict-list-item .prodict-list-item-box .box-img img{
+        width: 100%;
     }
     .prodict-list-item .prodict-list-item-box{
         width: 100%;

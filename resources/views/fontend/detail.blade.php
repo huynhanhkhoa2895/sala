@@ -67,8 +67,8 @@
                         <div class="prodict-list-item">
                             @foreach ($products as $item)
                                 <div class="prodict-list-item-box">
-                                    <div class="box-img">
-                                    <a href="{{url("thiep/".$item->slug)}}">
+                                    <div id="box-img" class="box-img">
+                                    <a href="{{url("thiep/".$item->slug)}}/#product-img">
                                             <img src="{{asset("img/product/".$item->image)}}" alt="{{$item->content}}" />
                                         </a>
                                     </div>

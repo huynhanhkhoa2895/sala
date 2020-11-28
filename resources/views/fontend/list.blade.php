@@ -28,7 +28,7 @@
                     @foreach ($product as $item)
                         <div class="prodict-list-item-box">
                             <div class="box-img">
-                            <a href="{{url("thiep/".$item->slug)}}">
+                            <a href="{{url("thiep/".$item->slug)}}/#product-img">
                                     <img src="{{asset("img/product/".$item->image)}}" alt="{{$item->content}}" />
                                 </a>
                             </div>
@@ -36,7 +36,7 @@
                                 <div class="product-name">{{$item->name}}</div>
                                 <div class="product-price">{{number_format($item->price)}} VND</div>
                                 <div class="product-cart">
-                                    <a href="{{url("thiep/".$item->slug)}}"><span class="fas fa-shopping-cart"></span>Mua hàng</a>
+                                    <a href="{{url("thiep/".$item->slug)}}/#product-img"><span class="fas fa-shopping-cart"></span>Mua hàng</a>
                                 </div>
                             </div>
                         </div>
