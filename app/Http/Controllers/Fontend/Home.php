@@ -23,4 +23,7 @@ class Home extends Controller
     public function getListStyle(){
         return Style::all();
     }
+    public function policy(){
+        return view("fontend.policy");
+    }
 }
