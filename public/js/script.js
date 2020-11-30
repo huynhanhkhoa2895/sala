@@ -1,9 +1,5 @@
 
 var audio = document.getElementById("music");
-// document.getElementById("music").autoplay
-// document.getElementById('music').autoplay = true;
-console.log(`audio`, $(audio))
-
 $(document).ready(function () {
     audio.volume = 0.3;
 
@@ -34,6 +30,11 @@ $(document).ready(function () {
         param['price'] = $(this).val()
         if ($(this).val() == 0) delete param['price']
         document.location.href = window.location.origin + "/search?" + $.param(param);
+    })
+    $(".product-list-kind-item").on("click",function(){
+        let href = $(this).children("a").attr("href")
+        document.location.href = href; 
+        // $(this).children("a").click();
     })
 
 })
