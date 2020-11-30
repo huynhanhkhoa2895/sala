@@ -90,6 +90,8 @@
 .facebook-fanpage{
     width: 250px;
     height: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .facebook-fanpage .banner{
     padding: 10px;

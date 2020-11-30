@@ -48,7 +48,9 @@
                                     <div>1.Giá áp dụng in 300 thiệp 1 nội dung</div>
                                     <div>2.Giá chưa bao gồm in bản đồ.</div>
                                     <div>3.Số lượng dưới 200, Không nhận in.</div>
-                                    <div>4. Liên hệ Zalo để được hỗ trợ tốt nhất</div>
+                                    <div>4.SL Trên 500 thiệp giảm 100đ.</div>
+                                    <div>5.SL Trên 700 thiệp giảm 200đ.</div>
+                                    <div>6.Liên hệ Zalo để được hỗ trợ tốt nhất</div>
                                     <p><a href="tel:0907000008">0907.000.008</a></p>
                                 </div>
                             </div>

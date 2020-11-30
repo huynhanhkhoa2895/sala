@@ -6,6 +6,8 @@ body,html{
     width: 100%;
     height: 100%;
 }
+.row { width: 100%; }                                                 
+.col { display:inline-block !important; }
 @font-face {
     font-family: 'mtd';
     src: url('MTD_Colatin.otf');
