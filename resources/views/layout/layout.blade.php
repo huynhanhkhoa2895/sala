@@ -48,7 +48,7 @@
         </div>
     </div>
     <div class="background-messenger">
-        <a href="https://www.facebook.com/Thiepcuoisalahcm/">
+        <a href="m.me/Thiepcuoisalahcm">
             <img src="{{asset("messenger.png")}}" alt="thiệp cưới sala" />
         </a>
     </div>
