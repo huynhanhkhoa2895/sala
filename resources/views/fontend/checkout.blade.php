@@ -151,7 +151,7 @@
                         <div class="form-group">
                             <label>Thời gian tổ chức hôn lễ</label>
                             <div class="form-row">
-                                <div class="col">
+                                <div class="col col-md">
                                     <div class="input-group mb-3">
                                         <input type="text" class="form-control" placeholder="Giờ" value="15">
                                         <div class="input-group-append">
@@ -159,7 +159,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col">
+                                <div class="col col-md">
                                     <div class="input-group mb-3">
                                         <input type="text" class="form-control" placeholder="Phút" value="00">
                                         <div class="input-group-append">
@@ -167,7 +167,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col">
+                                <div class="col-12 col-md">
                                     <input type="date" class="form-control" placeholder="Ngày tổ chức" value="15">
                                 </div>
                             </div>
