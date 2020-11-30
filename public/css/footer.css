@@ -87,6 +87,36 @@
     display: block;
     color: #c8ad5b;
 }
+.facebook-fanpage{
+    width: 250px;
+    height: 100px;
+}
+.facebook-fanpage .banner{
+    padding: 10px;
+    background-size: cover;
+    background-image: url(../fb_banner.png);
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+.facebook-fanpage .banner a{
+    display: block;
+}
+.facebook-fanpage .banner a img{
+    width: 100%;
+}
+.facebook-fanpage .banner .img-avatar{
+    border-radius: 100%;
+    overflow: hidden;
+    width: 30px;
+    float: left;
+}
+.facebook-fanpage .banner a span{
+    float: left;
+    font-weight: bold;
+    color: #fff;
+    font-size: 18px;
+}
 @media only screen and (max-width: 575px){
     .footer-new{
         width: 100%;

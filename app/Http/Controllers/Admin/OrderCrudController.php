@@ -46,12 +46,19 @@ class OrderCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        $this->crud->removeButton("show");
         $this->crud->removeButton("delete");
         $this->crud->removeButton("update");
         $this->crud->addColumn("id");
         CRUD::setFromDb();
         $this->crud->removeColumn("total");
+        $this->crud->modifyColumn("boy",["label"=>"Chú rể"]);
+        $this->crud->modifyColumn("dad_boy",["label"=>"Ông nhà trai"]);
+        $this->crud->modifyColumn("mom_boy",["label"=>"Bà nhà trai"]);
+        $this->crud->modifyColumn("address_boy",["label"=>"Bà nhà trai"]);
+        $this->crud->modifyColumn("girl",["label"=>"Cô dâu"]);
+        $this->crud->modifyColumn("dad_girl",["label"=>"Ông nhà gái"]);
+        $this->crud->modifyColumn("mom_girl",["label"=>"Bà nhà gái"]);
+        $this->crud->modifyColumn("address_girl",["label"=>"Bà nhà gái"]);
         $this->crud->addColumn("total");
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -69,7 +76,6 @@ class OrderCrudController extends CrudController
     protected function setupCreateOperation()
     {
         CRUD::setValidation(OrderRequest::class);
-
         
 
         /**

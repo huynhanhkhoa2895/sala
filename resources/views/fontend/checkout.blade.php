@@ -12,103 +12,124 @@
             @if (session('msg'))
                 <div class="alert alert-success">{{session('msg')}}</div>
             @endif
-            <table class="table table-bordered table-hover table-checkout">
-                <thead>
-                    <tr>
-                        <th class="text-center">Sản phẩm</th>
-                        <th class="text-center">Đơn giá</th>
-                        <th class="text-center">Số lượng</th>
-                        <th class="text-center"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($product as $item)
-                        @php
-                            $total += $item->price*$qtys[$item->id];
-                            $totalQty += $qtys[$item->id];
-                        @endphp
-                        <tr>
-                            <td>
-                                <div class="table-product">
-                                    <div class="table-product-img">
-                                        <img src="{{asset("img/product/".$item->image)}}" alt="{{$item->name}}" />
-                                    </div>
-                                    <div class="table-product-name">
-                                        <a href="{{url("thiep/".$item->slug)}}">{{$item->name}}</a>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="text-center">
-                                    {{number_format($item->price)}}
-                                </div>
-                            </td>
-                            <td>
-                                <div class="product-update">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="product-update-input-group input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text" onclick="changeQty(this,'minus')"><span class="fas fa-minus"></span></span>
-                                                </div>
-                                                <input class="form-control qty-input" value="{{$qtys[$item->id]}}" />
-                                                <div class="input-group-append">
-                                                    <span class="input-group-text" onclick="changeQty(this,'plus')"><span class="fas fa-plus"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <button style="width: 100%" class="btn-payment" onclick="updateCart(this,{{$item->id}})">Cập nhật</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="text-center">
-                                <a href="{{url("cart/remove/product/".$item->id)}}" onclick="return confirm('Bạn có muốn xóa ?');"><span class="fas fa-trash"></span></a>
-                            </td>
-                        </tr>
-                    @endforeach
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="3">
-                            <div class="total-price">Phụ thu</div>
-                        </td>
-                        <td class="text-center">
-                            <div class="total-price ">
-                                @if($totalQty < 300 && $totalQty >= 200)
-                                    @php $total += 50000 @endphp
-                                    {{number_format(50000)}}
-                                @elseif($totalQty < 200)
-                                    @php $total += 100000 @endphp
-                                    {{number_format(100000)}}
-                                @else
-                                    {{0}}
-                                @endif
-                            VND</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">
-                            <div class="total-price">Tổng tiền</div>
-                        </td>
-                        <td class="text-center">
-                            <div class="total-price ">{{number_format($total)}} VND</div>
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
+            @foreach($product as $item)
+                @php
+                    $total += $item->price*$qtys[$item->id];
+                    $totalQty += $qtys[$item->id];
+                @endphp
+                <div class="row">
+                    <div class="col-12 ">
+                        <a class="product-image" href="{{url("thiep/".$item->slug)}}">
+                            <img src="{{asset("img/product/".$item->image)}}" alt="{{$item->name}}" />
+                        </a>
+                        <h3 class="text-center">{{$item->name}}</h3>
+                    </div>
+                </div>
+            @endforeach
+            <div class="row">
+                <div class="col-12 text-center">
+                    <b>Số lượng: </b> {{$totalQty}} thiệp
+                </div>
+                <div class="col-12 text-center">
+                    <div class="total-price ">
+                        <b>Phụ thu:</b>
+                        @if($totalQty < 300 && $totalQty >= 200)
+                            @php $total += 50000 @endphp
+                            {{number_format(50000)}}
+                        @elseif($totalQty < 200)
+                            @php $total += 100000 @endphp
+                            {{number_format(100000)}}
+                        @else
+                            {{0}}
+                        @endif
+                    VND</div>
+                </div>
+                <div class="col-12 text-center"><b>Tổng tiền:</b> {{number_format($total)}} VND</div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p style="color: red"><i>* Nếu quý khách đặt dưới 300 thiệp sẽ phụ thu 50k</i></p>
+                    <p style="color: red"><i>* Nếu quý khách đặt dưới 200 thiệp sẽ phụ thu 100k</i></p>
+                </div>
+            </div>
+            <form action="{{route("post-checkout")}}" method="post">
+                {{ csrf_field() }}
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                <div class="row justify-content-md-center">
+                    <div class="col-md-4 col-12">
+                        <div class="form-group">
+                            <label>Họ và Tên người nhận hàng <span class="red">*</span></label>
+                            <input name="name" type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label >Số điện thoại người nhận hàng <span class="red">*</span></label>
+                            <input name="phone" type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label >Địa chỉ nhận hàng <span class="red">*</span></label>
+                            <input name="address" type="text" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <fieldset>
+                            <legend>Nhà gái</legend>
+                            <div class="form-group">
+                                <label>Ông: <span class="red">*</span></label>
+                                <input name="dad_girl" type="text" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label >Bà: <span class="red">*</span></label>
+                                <input name="mom_girl" type="text" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label >Cô dâu: <span class="red">*</span></label>
+                                <input name="girl" type="text" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label >Địa chỉ <span class="red">*</span></label>
+                                <input name="address_girl" type="text" class="form-control" />
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <fieldset>
+                            <legend>Nhà Trai</legend>
+                            <div class="form-group">
+                                <label>Ông: <span class="red">*</span></label>
+                                <input name="dad_boy" type="text" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label >Bà: <span class="red">*</span></label>
+                                <input name="mom_boy" type="text" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label >Chú rể: <span class="red">*</span></label>
+                                <input name="boy" type="text" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label >Địa chỉ: <span class="red">*</span></label>
+                                <input name="address_boy" type="text" class="form-control" />
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="row" style="padding-bottom: 10px">
+                    <div class="col-12 text-right">
+                        <button type="submit" class="btn btn-payment" href="{{url("cart/payment")}}">Đặt hàng</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
-    <div class="row" style="padding-bottom: 10px">
-        <div class="col-12 text-right">
-            <p style="color: red"><i>* Nếu quý khách đặt dưới 300 thiệp sẽ phụ thu 50k</i></p>
-            <p style="color: red"><i>* Nếu quý khách đặt dưới 200 thiệp sẽ phụ thu 100k</i></p>
-        </div>
-    </div>
-    <div class="row" style="padding-bottom: 10px">
-        <div class="col-12 text-right">
-            <a class="btn btn-payment" href="{{url("cart/payment")}}">Thanh toán</a>
-        </div>
-    </div>
+
 @endsection

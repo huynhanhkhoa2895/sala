@@ -20,6 +20,14 @@ class CreateOrderTable extends Migration
             $table->string("name");
             $table->string("phone");
             $table->string("address");
+            $table->string("girl");
+            $table->string("dad_girl");
+            $table->string("mom_girl");
+            $table->string("address_girl");
+            $table->string("boy");
+            $table->string("dad_boy");
+            $table->string("mom_boy");
+            $table->string("address_boy");
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });

@@ -142,10 +142,13 @@ button.btn-payment{
 }
 .background-messenger{
     position: fixed;
-    bottom: 30px;
+    bottom: 90px;
     z-index: 10;
     left: 20px;
     text-align: center;
+}
+.background-messenger.telephone{
+    bottom: 30px;
 }
 .background-icon{
     position: fixed;
@@ -200,4 +203,7 @@ button.btn-payment{
         right: 50px;
     }
 
+}
+.red{
+    color: red;
 }

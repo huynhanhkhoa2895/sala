@@ -21,27 +21,15 @@ class Cart extends Controller
         }
         $carts = $rq->session()->get("cart",[]);
         $check = true;
-        $new_cart = [];
-        foreach($carts as $cart){
-            if($cart['id'] == $rq->id){
-                $check = false;
-                $cart['qty'] += $rq->qty;
-            }
-            array_push($new_cart,$cart);
-        }
-        if(!$check){
-            $rq->session()->put('cart', $new_cart);
-        }else{
-            $product = Model::find($rq->id);
-            $cart = [
-                "id" => $rq->id,
-                "name" => $product->name,
-                "price" => $product->price,
-                "img" => $product->image,
-                "qty" => $rq->qty,
-            ];
-            $rq->session()->push('cart', $cart);
-        }
+        $product = Model::find($rq->id);
+        $cart[0] = [
+            "id" => $rq->id,
+            "name" => $product->name,
+            "price" => $product->price,
+            "img" => $product->image,
+            "qty" => $rq->qty,
+        ];
+        $rq->session()->put('cart', $cart);
         Session::flash('msg', 'Cập nhập giỏ hàng thành công'); 
         return response()->json($rq->session()->get('cart'));
     }
@@ -93,10 +81,16 @@ class Cart extends Controller
             'name' => 'required',
             'phone' => 'required|min:9',
             'address' => 'required|min:9',
+            'boy' => 'required',
+            'dad_boy' => 'required',
+            'mom_boy' => 'required',
+            'address_boy' => 'required',
+            'girl' => 'required',
+            'dad_girl' => 'required',
+            'mom_girl' => 'required',
+            'address_girl' => 'required',
         ],[
-            'name.required' => 'Bạn phải ghi đầy đủ thông tin tên',
-            'phone.required' => 'Bạn phải ghi đầy đủ thông tin số điện thoại',
-            'address.required' => 'Bạn phải ghi đầy đủ thông tin địa chỉ',
+            'required' => 'Bạn phải ghi đầy đủ thông tin tên',
         ])->validate();
         $carts = $request->session()->get("cart",[]);
         $total = 0;
@@ -119,6 +113,14 @@ class Cart extends Controller
         $order->name = $request->name;
         $order->phone = $request->phone;
         $order->address = $request->address;
+        $order->boy = $request->boy;
+        $order->dad_boy = $request->dad_boy;
+        $order->mom_boy = $request->mom_boy;
+        $order->address_boy = $request->address_boy;
+        $order->girl = $request->girl;
+        $order->dad_girl = $request->dad_girl;
+        $order->mom_girl = $request->mom_girl;
+        $order->address_girl = $request->address_girl;
         $order->total = $total;
         $order->save();
         foreach($data['product'] as $product){

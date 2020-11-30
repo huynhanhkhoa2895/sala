@@ -52,6 +52,11 @@
             <img src="{{asset("messenger.png")}}" alt="thiệp cưới sala" />
         </a>
     </div>
+    <div class="background-messenger telephone">
+        <a href="tel:0907000008">
+            <img src="{{asset("phone.gif")}}" alt="thiệp cưới sala" />
+        </a>
+    </div>
     @include("layout.script")
 </body>
 

@@ -74,7 +74,7 @@ function addToCart(id) {
         headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
         data: { id: id, qty: qty },
         success: function () {
-            window.location.reload();
+            document.location.href = window.location.origin+ "/cart/checkout";
         }
     })
 }

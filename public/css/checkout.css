@@ -1,3 +1,11 @@
+.product-image{
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+.product-image img{
+    max-width: 500px;
+}
 .table-checkout .table-product{
     display: flex;
 }
@@ -24,4 +32,9 @@
 .table-checkout .total-price{
     font-weight: bold;
     font-size: 18px;
+}
+@media only screen and (max-width: 501px){
+    .product-image img{
+        width: 100%;
+    }
 }
