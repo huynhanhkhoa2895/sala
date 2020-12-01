@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Models\Wedding_invitation as Model;
 use App\Models\Order as Order;
+use App\Models\WeddingInfo as WeddingInfo;
 use App\Models\OrderDetail as OrderDetail;
 use Illuminate\Support\Facades\Validator;
 use Session;
@@ -90,7 +91,7 @@ class Cart extends Controller
             'mom_girl' => 'required',
             'address_girl' => 'required',
         ],[
-            'required' => 'Bạn phải ghi đầy đủ thông tin tên',
+            'required' => 'Bạn phải ghi đầy đủ thông tin dưới đây',
         ])->validate();
         $carts = $request->session()->get("cart",[]);
         $total = 0;
@@ -113,25 +114,33 @@ class Cart extends Controller
         $order->name = $request->name;
         $order->phone = $request->phone;
         $order->address = $request->address;
-        $order->boy = $request->boy;
-        $order->dad_boy = $request->dad_boy;
-        $order->mom_boy = $request->mom_boy;
-        $order->address_boy = $request->address_boy;
-        $order->girl = $request->girl;
-        $order->dad_girl = $request->dad_girl;
-        $order->mom_girl = $request->mom_girl;
-        $order->address_girl = $request->address_girl;
         $order->total = $total;
         $order->save();
+
+        $wedding =  new WeddingInfo;
+        $wedding->order = $order->id;
+        $wedding->boy = $request->boy;
+        $wedding->dad_boy = $request->dad_boy;
+        $wedding->mom_boy = $request->mom_boy;
+        $wedding->address_boy = $request->address_boy;
+        $wedding->vocative_boy = $request->vocative_boy;
+        $wedding->girl = $request->girl;
+        $wedding->dad_girl = $request->dad_girl;
+        $wedding->mom_girl = $request->mom_girl;
+        $wedding->address_girl = $request->address_girl;
+        $wedding->vocative_girl = $request->vocative_girl;
+        $wedding->place = $request->place;
+        $wedding->place_address = $request->place_address;
+        $wedding->place_date = $request->place_h."giờ ".$request->place_m."phút ".date("d/m/Y",strtotime($request->place_d));
+        $wedding->place_mdate = date("d/m/Y",strtotime($request->place_md));
+        $wedding->organize_date = $request->organize_h."giờ ".$request->organize_m."phút ".date("d/m/Y",strtotime($request->organize_d));
+        $wedding->organize_mdate = date("d/m/Y",strtotime($request->organize_md));
+        // $wedding->place = $request->place;
         foreach($data['product'] as $product){
-            $orderDetail = new OrderDetail;
-            $orderDetail->order = $order->id;
-            $orderDetail->product = $product->id;
-            $orderDetail->qty = $qtys[$product->id];
-            $orderDetail->sub_price = $qtys[$product->id]*$product->price;
-            $orderDetail->save();
+            $wedding->product = $product->id;
         }
+        $wedding->save();
         $request->session()->forget('cart');
-        return redirect(url("/"));
+        return redirect(url("/"))->with("msg","Bạn đã đặt thiệp thành công, chúng tôi sẽ sớm liên hệ với bạn");
     }
 }

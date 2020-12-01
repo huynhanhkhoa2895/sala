@@ -4,7 +4,7 @@
             <h3>THIỆP CƯỚI SALA</h3>
             <div class="info"><span class="fas fa-share"></span> CÔNG TY TNHH IN BAO BÌ SALA THIỆP CƯỚI SALA</div>
             <div class="info"><a href="tel:090700008"><span class="fas fa-phone-square"></span> 090700008</a></div>
-            <div class="info"><a href="#THIEPCUOISALA123@GMAIL.COM"><span class="fas fa-envelope"></span> Email: congtyin.ads@gmail.com</a></div>
+            <div class="info"><a href="#THIEPCUOISALA123@GMAIL.COM"><span class="fas fa-envelope"></span> Email: thiepcuoisala123@gmail.com</a></div>
             <div class="info facebook-fanpage">
                 <div class="banner">
                     <a href="https://www.facebook.com/Thiepcuoisalahcm/">

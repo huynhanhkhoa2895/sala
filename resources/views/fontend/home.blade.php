@@ -3,6 +3,9 @@
     <link href="{{asset("css/owl.carousel.min.css")}}" rel="stylesheet" />
     <link href="{{asset("css/owl.theme.default.min.css")}}" rel="stylesheet" />
 @endsection
+@if (session('msg'))
+    <div class="alert alert-success">{{session('msg')}}</div>
+@endif
 @section('carousel')
     <div class="carousel">
         <div class="row">
@@ -30,6 +33,7 @@
     </div>
 @endsection
 @section('content')
+
     <div class="products">
         <div class="row">
             <div class="col-sm-5 col-md-4 col-lg-3 pd10">
@@ -147,7 +151,7 @@
         <div class="row">
             <div class="col-md col-12">
                 <span class="fas fa-truck fa-3x"></span>
-                <span class="text">Ship code toàn quốc</span>
+                <span class="text">Ship COD toàn quốc</span>
             </div>
             <div class="col-md col-12">
                 <span class="fas fa-money-bill fa-3x"></span>

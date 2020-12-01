@@ -127,7 +127,7 @@
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-12">
-                                    <span>Chú rể </span>
+                                    <span>Chú rể <span class="red">*</span></span>
                                     <select style="display: inline-block;max-width : 200px" name="vocative_boy" class="form-control">
                                         <option value="trưởng">Trưởng</option>
                                         <option value="thứ">Thứ</option>
@@ -139,7 +139,7 @@
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-12">
-                                    <span>Cô Dâu </span>
+                                    <span>Cô Dâu <span class="red">*</span></span>
                                     <select style="display: inline-block;max-width : 200px" name="vocative_girl" class="form-control">
                                         <option value="trưởng">Trưởng</option>
                                         <option value="thứ">Thứ</option>
@@ -153,22 +153,22 @@
                             <div class="form-row">
                                 <div class="col col-md">
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="Giờ" value="15">
+                                        <input name="organize_h" type="number" class="form-control" placeholder="Giờ" value="15">
                                         <div class="input-group-append">
-                                          <span class="input-group-text" id="basic-addon2">Giờ</span>
+                                          <span class="input-group-text" >Giờ</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col col-md">
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="Phút" value="00">
+                                        <input name="organize_m" type="number" class="form-control" placeholder="Phút" value="00">
                                         <div class="input-group-append">
-                                            <span class="input-group-text" id="basic-addon2">Phút</span>
+                                            <span class="input-group-text" >Phút</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md">
-                                    <input type="date" class="form-control" placeholder="Ngày tổ chức" value="15">
+                                    <input name="organize_d" type="date" class="form-control" placeholder="Ngày tổ chức" />
                                 </div>
                             </div>
                         </div>
@@ -176,7 +176,7 @@
                             <label>Nhằm ngày</label>
                             <div class="form-row">
                                 <div class="col">
-                                    <input type="date" class="form-control" placeholder="Ngày tổ chức" value="15">
+                                    <input name="organize_md" type="date" class="form-control" placeholder="Ngày tổ chức" />
                                 </div>
                             </div>
                         </div>
@@ -184,45 +184,45 @@
                     <div class="col-12 col-md-6 text-center">
                         <h3>Nơi đãi tiệc</h3>
                         <div>
-                            <select class="form-control">
-                                <option>Tại nhà hàng</option>
-                                <option>Tại tư gia</option>
+                            <select name="place" class="form-control">
+                                <option value="Nhà Hàng">Tại nhà hàng</option>
+                                <option value="Tư Gia">Tại tư gia</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Địa chỉ</label>
-                            <input name="address_restaurant" type="text" class="form-control" />
+                            <label>Địa chỉ <span class="red">*</span></label>
+                            <input name="place_address" type="text" class="form-control" />
                         </div>
                         <div class="form-group">
-                            <label>Thời gian</label>
+                            <label>Thời gian <span class="red">*</span></label>
                             <div class="form-row">
                                 <div class="col">
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="Giờ" value="15">
+                                        <input name="place_h" type="number" class="form-control" placeholder="Giờ" value="15">
                                         <div class="input-group-append">
-                                          <span class="input-group-text" id="basic-addon2">Giờ</span>
+                                          <span class="input-group-text" >Giờ</span>
                                         </div>
                                     </div>
                                     
                                 </div>
                                 <div class="col">
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="Phút" value="00">
+                                        <input name="place_m" type="number" class="form-control" placeholder="Phút" value="00">
                                         <div class="input-group-append">
-                                            <span class="input-group-text" id="basic-addon2">Phút</span>
+                                            <span class="input-group-text" >Phút</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <input type="date" class="form-control" placeholder="Ngày tổ chức" value="15">
+                                    <input name="place_d" type="date" class="form-control" placeholder="Ngày tổ chức" />
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Nhằm ngày</label>
+                            <label>Nhằm ngày <span class="red">*</span></label>
                             <div class="form-row">
                                 <div class="col">
-                                    <input type="date" class="form-control" placeholder="Ngày tổ chức" value="15">
+                                    <input name="place_md" type="date" class="form-control" placeholder="Ngày tổ chức" />
                                 </div>
                             </div>
                         </div>
@@ -230,7 +230,7 @@
                 </div>
                 <div class="row" style="padding-bottom: 10px">
                     <div class="col-12 text-center">
-                        <button type="submit" class="btn btn-payment" href="{{url("cart/payment")}}">Đặt thiệp</button>
+                        <button type="submit" class="btn btn-payment">Đặt thiệp</button>
                     </div>
                 </div>
             </form>
