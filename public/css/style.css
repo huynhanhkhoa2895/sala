@@ -114,7 +114,7 @@ input.sala-input:focus,select.sala-input:focus{
     cursor: pointer;
 }
 .prodict-list-item .prodict-list-item-box .box-img img{
-    width: 250px;
+    width: 375px;
     height: 250px;
 }
 .prodict-list-item .prodict-list-item-box .box-info{
@@ -140,7 +140,7 @@ input.sala-input:focus,select.sala-input:focus{
     border-radius: 6px;
 }
 .prodict-list-item-box{
-    width: 250px;
+    width: 375px;
     margin: 10px;
     padding: 10px;
 }
