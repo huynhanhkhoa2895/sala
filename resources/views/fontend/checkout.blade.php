@@ -67,15 +67,15 @@
                     <div class="col-md-4 col-12">
                         <div class="form-group">
                             <label>Họ và Tên người nhận hàng <span class="red">*</span></label>
-                            <input name="name" type="text" class="form-control" />
+                            <input name="name" type="text" class="form-control" required/>
                         </div>
                         <div class="form-group">
                             <label >Số điện thoại người nhận hàng <span class="red">*</span></label>
-                            <input name="phone" type="text" class="form-control" />
+                            <input name="phone" type="text" class="form-control" required/>
                         </div>
                         <div class="form-group">
                             <label >Địa chỉ nhận hàng <span class="red">*</span></label>
-                            <input name="address" type="text" class="form-control" />
+                            <input name="address" type="text" class="form-control" required/>
                         </div>
                     </div>
                 </div>
@@ -85,19 +85,19 @@
                             <legend>Nhà gái</legend>
                             <div class="form-group">
                                 <label>Ông: <span class="red">*</span></label>
-                                <input name="dad_girl" type="text" class="form-control" />
+                                <input name="dad_girl" type="text" class="form-control" required/>
                             </div>
                             <div class="form-group">
                                 <label >Bà: <span class="red">*</span></label>
-                                <input name="mom_girl" type="text" class="form-control" />
+                                <input name="mom_girl" type="text" class="form-control" required/>
                             </div>
                             <div class="form-group">
                                 <label >Cô dâu: <span class="red">*</span></label>
-                                <input name="girl" type="text" class="form-control" />
+                                <input name="girl" type="text" class="form-control" required/>
                             </div>
                             <div class="form-group">
                                 <label >Địa chỉ <span class="red">*</span></label>
-                                <input name="address_girl" type="text" class="form-control" />
+                                <input name="address_girl" type="text" class="form-control" required />
                             </div>
                         </fieldset>
                     </div>
@@ -106,19 +106,19 @@
                             <legend>Nhà Trai</legend>
                             <div class="form-group">
                                 <label>Ông: <span class="red">*</span></label>
-                                <input name="dad_boy" type="text" class="form-control" />
+                                <input name="dad_boy" type="text" class="form-control" required/>
                             </div>
                             <div class="form-group">
                                 <label >Bà: <span class="red">*</span></label>
-                                <input name="mom_boy" type="text" class="form-control" />
+                                <input name="mom_boy" type="text" class="form-control" required/>
                             </div>
                             <div class="form-group">
                                 <label >Chú rể: <span class="red">*</span></label>
-                                <input name="boy" type="text" class="form-control" />
+                                <input name="boy" type="text" class="form-control" required/>
                             </div>
                             <div class="form-group">
                                 <label >Địa chỉ: <span class="red">*</span></label>
-                                <input name="address_boy" type="text" class="form-control" />
+                                <input name="address_boy" type="text" class="form-control" required/>
                             </div>
                         </fieldset>
                     </div>
@@ -153,7 +153,7 @@
                             <div class="form-row">
                                 <div class="col col-md">
                                     <div class="input-group mb-3">
-                                        <input name="organize_h" type="number" class="form-control" placeholder="Giờ" value="15">
+                                        <input name="organize_h" type="number" class="form-control" placeholder="Giờ" value="15" required>
                                         <div class="input-group-append">
                                           <span class="input-group-text" >Giờ</span>
                                         </div>
@@ -161,14 +161,14 @@
                                 </div>
                                 <div class="col col-md">
                                     <div class="input-group mb-3">
-                                        <input name="organize_m" type="number" class="form-control" placeholder="Phút" value="00">
+                                        <input name="organize_m" type="number" class="form-control" placeholder="Phút" value="00" required>
                                         <div class="input-group-append">
                                             <span class="input-group-text" >Phút</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md">
-                                    <input name="organize_d" type="date" class="form-control" placeholder="Ngày tổ chức" />
+                                    <input name="organize_d" type="date" class="form-control" placeholder="Ngày tổ chức" required/>
                                 </div>
                             </div>
                         </div>
@@ -176,7 +176,7 @@
                             <label>Nhằm ngày</label>
                             <div class="form-row">
                                 <div class="col">
-                                    <input name="organize_md" type="date" class="form-control" placeholder="Ngày tổ chức" />
+                                    <input name="organize_md" type="date" class="form-control" placeholder="Ngày tổ chức" required/>
                                 </div>
                             </div>
                         </div>
@@ -191,30 +191,30 @@
                         </div>
                         <div class="form-group">
                             <label>Địa chỉ <span class="red">*</span></label>
-                            <input name="place_address" type="text" class="form-control" />
+                            <input name="place_address" type="text" class="form-control" required/>
                         </div>
                         <div class="form-group">
                             <label>Thời gian <span class="red">*</span></label>
                             <div class="form-row">
                                 <div class="col">
                                     <div class="input-group mb-3">
-                                        <input name="place_h" type="number" class="form-control" placeholder="Giờ" value="15">
+                                        <input name="place_h" type="number" class="form-control" placeholder="Giờ" value="15" required>
                                         <div class="input-group-append">
-                                          <span class="input-group-text" >Giờ</span>
+                                            <span class="input-group-text" >Giờ</span>
                                         </div>
                                     </div>
                                     
                                 </div>
                                 <div class="col">
                                     <div class="input-group mb-3">
-                                        <input name="place_m" type="number" class="form-control" placeholder="Phút" value="00">
+                                        <input name="place_m" type="number" class="form-control" placeholder="Phút" value="00" required>
                                         <div class="input-group-append">
                                             <span class="input-group-text" >Phút</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <input name="place_d" type="date" class="form-control" placeholder="Ngày tổ chức" />
+                                    <input name="place_d" type="date" class="form-control" placeholder="Ngày tổ chức" required />
                                 </div>
                             </div>
                         </div>
@@ -222,7 +222,7 @@
                             <label>Nhằm ngày <span class="red">*</span></label>
                             <div class="form-row">
                                 <div class="col">
-                                    <input name="place_md" type="date" class="form-control" placeholder="Ngày tổ chức" />
+                                    <input name="place_md" type="date" class="form-control" placeholder="Ngày tổ chức" required />
                                 </div>
                             </div>
                         </div>
@@ -236,5 +236,4 @@
             </form>
         </div>
     </div>
-
 @endsection

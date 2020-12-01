@@ -25,7 +25,7 @@
                         </div>
                         <div class="product-content-container-item">
                             <div id="price" data-price="{{$product->price}}" class="product-price">Đơn giá: <span>{{number_format($product->price)}} VND</span></div>
-                            <div class="product-price">Tổng giá: <span id="sub_price">{{number_format($product->price*$qty)}} VND</span></div>
+                            <div class="product-price">Tổng giá: <span id="sub_price" data-total="{{$product->price*$qty}}">{{number_format($product->price*$qty)}} VND</span></div>
                             <div class="product-update">
                                 <div class="product-update-input-group input-group mb-3">
                                     <div class="input-group-prepend">
@@ -45,12 +45,9 @@
                             </div>
                             <div class="product-contact">
                                 <div class="product-contact-info">
-                                    <div>1.Giá áp dụng in 300 thiệp 1 nội dung</div>
-                                    <div>2.Giá chưa bao gồm in bản đồ.</div>
-                                    <div>3.Số lượng dưới 200, Không nhận in.</div>
-                                    <div>4.SL Trên 500 thiệp giảm 100đ.</div>
-                                    <div>5.SL Trên 700 thiệp giảm 200đ.</div>
-                                    <div>6.Liên hệ Zalo để được hỗ trợ tốt nhất</div>
+                                    <div>1. Giá áp dụng in 300 thiệp</div>
+                                    <div>2. Giá chưa bao gồm in bản đồ.</div>
+                                    <div>3. SL dưới 300 thiệp phụ thu 50k; Dưới 200 thiệp phụ thu 100k.</div>
                                     <p><a href="tel:0907000008">0907.000.008</a></p>
                                 </div>
                             </div>
