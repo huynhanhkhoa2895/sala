@@ -36,6 +36,11 @@ $(document).ready(function () {
         document.location.href = href; 
         // $(this).children("a").click();
     })
+    $("#select-list-style").on("change",function(){
+        if($(this).val() != 0){
+            document.location.href = window.location.origin+"/loai-thiep/"+$(this).val(); 
+        }
+    })
 
 })
 function coverQueryParamToJson() {

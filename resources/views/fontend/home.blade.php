@@ -53,7 +53,7 @@
                             <div class="col-12 col-md" style="margin-bottom: 10px">
                                 <div class="row">
                                     <div class="col">
-                                        <select class="form-control sala-input">
+                                        <select id="select-list-style" class="form-control sala-input">
                                             <option value="0">Chọn kiểu</option>
                                             @foreach ($style as $item)
                                                 <option value="{{$item->id}}">{{$item->content}}</option>
