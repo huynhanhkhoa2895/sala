@@ -85,9 +85,10 @@ function InputQtyHandleChange() {
         $("#input-qty").val(val)
         InputQtyHandleChange();
     }else{
-        let price = $("#price").data("price")
-
-        $("#sub_price").html(number_format(Number(price) * Number(val)));
+        let price = Number($("#price").data("price"))
+        let total = 0;        
+        total = (Number(price) * Number(val))
+        $("#sub_price").html(number_format(total));
     }
 
 
