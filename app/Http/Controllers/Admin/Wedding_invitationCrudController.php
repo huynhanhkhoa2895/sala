@@ -6,6 +6,8 @@ use App\Http\Requests\Wedding_invitationRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 use App\Models\Wedding_invitation as Model;
+use App\Models\Color as ModelColor;
+use App\Models\Style as ModelStyle;
 /**
  * Class Wedding_invitationCrudController
  * @package App\Http\Controllers\Admin
@@ -53,7 +55,9 @@ class Wedding_invitationCrudController extends CrudController
                 'label' => 'Màu sắc',
                 'type'     => 'closure',
                 'function' => function($entry) {
-                    return Model::find($entry->id)->colors()->where("id",$entry->color)->first()->content;
+                    $color = ModelColor::where("id",$entry->color)->first();
+                    $content = $color["content"];
+                    return $content;
                 }
             ]
         );
@@ -62,7 +66,7 @@ class Wedding_invitationCrudController extends CrudController
                 'name' => 'style',
                 'type'     => 'closure',
                 'function' => function($entry) {
-                    return Model::find($entry->id)->styles()->where("id",$entry->style)->first()->content;
+                    return ModelStyle::where("id",$entry->style)->first()->content;
                 }
             ]
         );
@@ -153,5 +157,12 @@ class Wedding_invitationCrudController extends CrudController
     protected function setupUpdateOperation()
     {
         $this->setupCreateOperation();
+    }
+    protected function setupShowOperation(){
+        $this->crud->addColumn(            [
+            'name' => 'image',
+            'type' => 'image',
+            'prefix' => 'img/product/',
+        ],);
     }
 }

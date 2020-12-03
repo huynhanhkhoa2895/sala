@@ -36,10 +36,10 @@
 
     <div class="products">
         <div class="row">
-            <div class="col-sm-5 col-md-4 col-lg-3 pd10">
+            <div class="col-sm-12 col-md-4 col-lg-2 pd10">
                 <x-list-style></x-list-style>
             </div>
-            <div class="col-sm-7 col-md-8 col-lg-9 pd0">
+            <div class="col-sm-7 col-md-8 col-lg-10 pd0">
                 <div class="product-list">
                     <div class="product-list-filter">
                         <div class="row" style="margin-bottom: 20px">
@@ -106,7 +106,7 @@
                         <div class="item">
                             <h4 class="title-news"><a href="{{$new->slug}}">{{$new->title}}</a></h4>
                             <div class="img-news">
-                                <a href="{{$new->slug}}">
+                                <a href="{{url("news/".$new->slug)}}">
                                     <img src="{{asset("img/news/".$new->img)}}" alt="{{$new->title}}" />
                                 </a>
                             </div>
@@ -123,12 +123,10 @@
                     Xin Chào
                 </div>
                 <div class="content text-center">
-                    <p>Giá bao gồm in 1 nội dung với số lượng từ 300 trở lên</p>
-                    <p>Số lượng ít hơn hoặc chia tách nhỏ số lượng sẽ tính phí</p>
-                    <p>Số lượng dưới 200, vui lòng liên hệ Zalo</p>
-                    <p>Giá chưa bao gồm bản đồ</p>
-                    <p>Thời gian in: 3-5 ngày (Tùy mẫu)</p>
-                    <p>Không in được: hình CDCR, tiếng hoa và mẫu thiết kế riêng</p>
+                    <p>1. Giá áp dụng in 300 thiệp</p>
+                    <p>2. Giá chưa bao gồm in bản đồ.</p>
+                    <p>3. SL dưới 300 thiệp phụ thu 50k; Dưới 200 thiệp phụ thu 100k.</p>
+                    <p><a href="tel:0907000008">0907.000.008</a></p>
                 </div>
                 <div class="contact text-center" id="contact">
                     <div>Nhập email hoặc số điện thoại để được tư vấn ngay</div>

@@ -80,8 +80,8 @@ class Cart extends Controller
         $id=[];
         $validator = Validator::make($request->all(), [
             'name' => 'required',
-            'phone' => 'required|min:9',
-            'address' => 'required|min:9',
+            'phone' => 'required',
+            'address' => 'required',
             'boy' => 'required',
             'dad_boy' => 'required',
             'mom_boy' => 'required',
@@ -119,6 +119,7 @@ class Cart extends Controller
 
         $wedding =  new WeddingInfo;
         $wedding->order = $order->id;
+        $wedding->title = $request->title;
         $wedding->boy = $request->boy;
         $wedding->dad_boy = $request->dad_boy;
         $wedding->mom_boy = $request->mom_boy;

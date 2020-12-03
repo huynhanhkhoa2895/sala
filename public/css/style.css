@@ -108,14 +108,12 @@ input.sala-input:focus,select.sala-input:focus{
     float: left;
 }
 .prodict-list-item .prodict-list-item-box .box-img{
-    height: 250px;
     overflow: hidden;
     width: 100%;
     cursor: pointer;
 }
 .prodict-list-item .prodict-list-item-box .box-img img{
     width: 100%;
-    height: 250px;
 }
 .prodict-list-item .prodict-list-item-box .box-info{
     height: 50px;
@@ -147,5 +145,11 @@ input.sala-input:focus,select.sala-input:focus{
 .prodict-list-item-box:hover{
     box-shadow: 1px 2px 3px 6px #ccc;
     border-radius: 10px;
+}
+.color{
+    color: #c8ad5b;
+}
+.news-container{
+    font-family: Roboto;
 }
 

@@ -23,6 +23,9 @@ Route::group(["namespace"=>"App\Http\Controllers\Fontend","middleware"=>["ssl"]]
     Route::group(["prefix"=>"search"],function(){
         Route::get('/',"Search@index");
     });
+    Route::group(["prefix"=>"news"],function(){
+        Route::get('{slug}',"News@index");
+    });
     Route::group(["prefix"=>"cart"],function(){
         Route::post('/add',"Cart@Add");
         Route::put('/update',"Cart@Update");

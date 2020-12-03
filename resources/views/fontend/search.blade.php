@@ -1,10 +1,10 @@
 @extends('layout.layout')
 @section('content')
     <div class="row">
-        <div class="col-sm-5 col-md-4 col-lg-3 pd10">
+        <div class="col-sm-12 col-md-4 col-lg-2 pd10">
             <x-list-style></x-list-style>
         </div>
-        <div class="col-sm-7 col-md-8 col-lg-9 pd0">
+        <div class="col-sm-7 col-md-8 col-lg-10 pd0">
             <div class="product-list">
                 <div class="product-list-filter">
                     <div class="row" style="margin-bottom: 20px">
@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div class="product-paging">
-                {{ $product->links() }}
+                {{ $product->appends($_GET)->links() }}
             </div>
         </div>
     </div>

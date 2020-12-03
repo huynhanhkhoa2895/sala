@@ -46,12 +46,6 @@
                 </div>
                 <div class="col-12 text-center"><b>Tổng tiền:</b> {{number_format($total)}} VND</div>
             </div>
-            {{-- <div class="row">
-                <div class="col-12 text-center">
-                    <p style="color: red"><i>* Nếu quý khách đặt dưới 300 thiệp sẽ phụ thu 50k</i></div>
-                    <p style="color: red"><i>* Nếu quý khách đặt dưới 200 thiệp sẽ phụ thu 100k</i></div>
-                </div>
-            </div> --}}
             <form action="{{route("post-checkout")}}" method="post">
                 {{ csrf_field() }}
                 @if ($errors->any())
@@ -123,28 +117,58 @@
                         </fieldset>
                     </div>
                     <div class="col-12 col-md-6 text-center">
-                        <h3>Trân trọng báo tin LỄ VU QUY/ T.HÔN</h3>
+                        <h3>Trân trọng báo tin</h3>
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-12">
-                                    <span>Chú rể <span class="red">*</span></span>
-                                    <select style="display: inline-block;max-width : 200px" name="vocative_boy" class="form-control">
-                                        <option value="trưởng">Trưởng</option>
-                                        <option value="thứ">Thứ</option>
-                                        <option value="út">Út</option>
-                                    </select>
+                                    <div style="max-width: 400px;margin : auto">
+                                        <div class="row">
+                                            <div class="col-3">Lễ <span class="red">*</span></div>
+                                            <div class="col-9">
+                                                <select style="display: inline-block;max-width : 200px" name="title" class="form-control">
+                                                    <option value="Vu Quy">Vu Quy</option>
+                                                    <option value="Tân Hôn">Tân Hôn</option>
+                                                    <option value="Thành Hôn">Thành Hôn</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-12">
-                                    <span>Cô Dâu <span class="red">*</span></span>
-                                    <select style="display: inline-block;max-width : 200px" name="vocative_girl" class="form-control">
-                                        <option value="trưởng">Trưởng</option>
-                                        <option value="thứ">Thứ</option>
-                                        <option value="út">Út</option>
-                                    </select>
+                                    <div style="max-width: 400px;margin : auto">
+                                        <div class="row">
+                                            <div class="col-3">Chú rễ <span class="red">*</span></div>
+                                            <div class="col-9">
+                                                <select style="display: inline-block;max-width : 200px" name="vocative_boy" class="form-control">
+                                                    <option value="trưởng">Trưởng</option>
+                                                    <option value="thứ">Thứ</option>
+                                                    <option value="út">Út</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div style="max-width: 400px;margin : auto">
+                                        <div class="row">
+                                            <div class="col-3">Cô Dâu <span class="red">*</span></div>
+                                            <div class="col-9">
+                                                <select style="display: inline-block;max-width : 200px" name="vocative_girl" class="form-control">
+                                                    <option value="trưởng">Trưởng</option>
+                                                    <option value="thứ">Thứ</option>
+                                                    <option value="út">Út</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
