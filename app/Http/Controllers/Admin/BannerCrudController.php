@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\NewsRequest;
+use App\Http\Requests\BannerRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
- * Class NewsCrudController
+ * Class BannerCrudController
  * @package App\Http\Controllers\Admin
  * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
  */
-class NewsCrudController extends CrudController
+class BannerCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
@@ -26,9 +26,9 @@ class NewsCrudController extends CrudController
      */
     public function setup()
     {
-        CRUD::setModel(\App\Models\News::class);
-        CRUD::setRoute(config('backpack.base.route_prefix') . '/news');
-        CRUD::setEntityNameStrings('Tin tức', 'Tin tức');
+        CRUD::setModel(\App\Models\Banner::class);
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/banner');
+        CRUD::setEntityNameStrings('Hình banner', 'Hình banner');
     }
 
     /**
@@ -39,16 +39,21 @@ class NewsCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::setFromDb();
-        CRUD::removeColumn('content');
+        CRUD::setFromDb(); // columns
         CRUD::modifyColumn('img',
             [
                 'label' => "Hình ảnh",
                 'type' => 'image',
-                'prefix' => 'img/news/',
+                'prefix' => 'img/banner/',
             ],
-            
         );
+        CRUD::modifyColumn('status',
+        [
+            'label' => "Hoạt Động",
+            'type'  => 'check',
+        ],
+    );
+        
         /**
          * Columns can be defined using the fluent syntax or array syntax:
          * - CRUD::column('price')->type('number');
@@ -64,16 +69,16 @@ class NewsCrudController extends CrudController
      */
     protected function setupCreateOperation()
     {
-        CRUD::setValidation(NewsRequest::class);
+        CRUD::setValidation(BannerRequest::class);
 
-        CRUD::setFromDb();
-        $this->crud->removeField("slug");
+        CRUD::setFromDb(); // fields
         $this->crud->modifyField("img",[
             'type' => 'image',
             'aspect_ratio' => 1,
-            'label' => 'Hình tin tức',
+            'label' => 'Hình banner',
+            'prefix' => 'img/banner/',
         ],);
-
+        $this->crud->modifyField("status",['label'=>"Hoạt Động"]);
         /**
          * Fields can be defined using the fluent syntax or array syntax:
          * - CRUD::field('price')->type('number');

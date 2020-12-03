@@ -46,7 +46,6 @@ class OrderCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        $this->crud->removeButton("delete");
         $this->crud->removeButton("update");
         $this->crud->addColumn("id");
         CRUD::setFromDb();

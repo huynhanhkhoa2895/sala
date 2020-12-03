@@ -9,12 +9,14 @@ use App\Models\Color;
 use App\Models\Style;
 use App\Models\News;
 use App\Models\Wedding_invitation;
+use App\Models\Banner;
 
 class Home extends Controller
 {
     //
     public function index(){
         $data['color'] = Color::all();
+        $data['banner'] = Banner::where("status",1)->get();
         $data['style'] = Style::all();
         $data['news'] = News::all();
         $data['product']=Wedding_invitation::limit(15)->orderBy("id","desc")->get();
