@@ -168,6 +168,7 @@
                 nav:false,
                 dots: true,
                 responsiveClass:true,
+                autoplay: true,
                 responsive:{
                     0:{
                         items:1
