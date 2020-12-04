@@ -100,7 +100,7 @@
                 <div class="owl-carousel owl-theme">
                     @foreach($news as $new)
                         <div class="item">
-                            <h4 class="title-news"><a href="{{$new->slug}}">{{$new->title}}</a></h4>
+                            <h4 class="title-news"><a href="{{url("news/".$new->slug)}}">{{$new->title}}</a></h4>
                             <div class="img-news">
                                 <a href="{{url("news/".$new->slug)}}">
                                     <img src="{{asset("img/news/".$new->img)}}" alt="{{$new->title}}" />

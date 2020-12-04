@@ -72,6 +72,11 @@ class NewsCrudController extends CrudController
             'type' => 'image',
             'aspect_ratio' => 1,
             'label' => 'Hình tin tức',
+            'prefix' => "img/news/"
+        ],);
+        $this->crud->modifyField("content",[
+            'type' => 'ckeditor',
+            'label' => 'Nội dung tin tức',
         ],);
 
         /**

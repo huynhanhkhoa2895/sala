@@ -1,0 +1,9 @@
+.news-image{
+    margin : auto;
+    text-align: center;
+    width: 60%;
+    overflow: hidden;
+}
+.news-image img{
+    width: 100%;
+}

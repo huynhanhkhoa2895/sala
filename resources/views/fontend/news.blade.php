@@ -1,4 +1,7 @@
 @extends('layout.layout')
+@section('css')
+    <link href="{{asset("css/news.css")}}" rel="stylesheet" />
+@endsection
 @section('content')
     <div class="news-container">
         <div class="row" style="margin-top: 20px">
@@ -8,15 +11,17 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <div style="margin : auto;text-align: center">
+                <div class="news-image">
                     <img src="{{asset("img/news/".$news->img)}}" alt="{{$news->title}}" />
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                {{$news->content}}
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    {!!$news->content!!}
+                </div>
             </div>
-        </div>
+        <div class="row">
     </div>
 @endsection
