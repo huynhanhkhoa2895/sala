@@ -39,9 +39,7 @@
                             </div>
                             <div class="product-cart">
                                 <a href="javascript:void(0)" onclick="addToCart({{$product->id}})"><span class="fas fa-shopping-cart"></span>Mua hàng</a>
-                            </div>
-                            <div class="pd0">
-                                <a style="color: #a55109;text-decoration: none;font-size: 24px;font-family: Roboto" href="{{url("thiep/so-sanh/".$product->slug)}}" class="btn btn-link pdl0 font-weight-bold"><span class="fas fa-sync"></span> So Sánh Với Sản Phẩm Khác</a>
+                                <a href="{{url("thiep/so-sanh/".$product->slug)}}" class="btn btn-link pdl0 font-weight-bold"><span class="fas fa-sync"></span> So Sánh Với Sản Phẩm Khác</a>
                             </div>
                             <div class="product-contact">
                                 <div class="product-contact-info">
