@@ -10,3 +10,11 @@
 .news-container img{
     max-width: 100%;
 }
+@media only screen and (max-width: 1090px){
+    .news-container .col-12{
+        padding: 0;
+    }
+    .news-image{
+        width: 100%;
+    }
+}
