@@ -7,3 +7,6 @@
 .news-image img{
     width: 100%;
 }
+.news-container img{
+    max-width: 100%;
+}
