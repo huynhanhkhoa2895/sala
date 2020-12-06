@@ -50,6 +50,13 @@ class Wedding_invitationCrudController extends CrudController
         );
         CRUD::addColumn(
             [
+                'label' => 'Thiệp',
+                'name' => 'name',
+                'type' => 'text',
+            ],
+        );
+        CRUD::addColumn(
+            [
                 'name' => 'color',
                 'label' => 'Màu sắc',
                 'type'     => 'closure',
