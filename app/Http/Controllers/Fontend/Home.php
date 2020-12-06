@@ -19,7 +19,10 @@ class Home extends Controller
         $data['banner'] = Banner::where("status",1)->get();
         $data['style'] = Style::all();
         $data['news'] = News::all();
-        $data['product']=Wedding_invitation::limit(15)->orderBy("id","desc")->get();
+        $data['product']=Wedding_invitation::where("sort",">",0)->orderBy("sort","asc")->get();
+        if(count($data['product']) === 0){
+            $data['product']=Wedding_invitation::limit(15)->orderBy("id","desc")->get();
+        }
         return view("fontend/home",$data);
     }
     public function getListStyle(){

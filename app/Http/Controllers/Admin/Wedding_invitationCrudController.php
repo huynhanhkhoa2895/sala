@@ -70,6 +70,25 @@ class Wedding_invitationCrudController extends CrudController
                 }
             ]
         );
+        CRUD::addColumn(
+            [
+                'name' => 'sort',
+                'type'     => 'closure',
+                'function' => function($entry) {
+                    if($entry->sort > 0){
+                        return "Xuất hiện ở trang chủ với sort ".$entry;
+                    }else{
+                        return "Không hiện ở trang chủ";
+                    }
+                }
+            ]
+        );
+        CRUD::addColumn(
+        [
+            'name' => 'status',
+            'label' => "Hoạt Động",
+            'type'  => 'check',
+        ]);
         /**
          * Columns can be defined using the fluent syntax or array syntax:
          * - CRUD::column('price')->type('number');
@@ -97,6 +116,7 @@ class Wedding_invitationCrudController extends CrudController
                 'type' => 'image',
                 'aspect_ratio' => 1,
                 'label' => 'Hình sản phẩm',
+                'prefix' => 'img/product/',
             ],
             
         );
@@ -134,6 +154,14 @@ class Wedding_invitationCrudController extends CrudController
                 'placeholder' => "Lựa chọn kiểu",
             ],
         );
+        CRUD::addField(
+            [
+                'name' => 'sort',
+                'type'     => 'number',
+                'label' => 'Vị trí sắp xếp (nếu lớn hơn 0 sẽ xuất hiện ở trang chủ và thứ tự sắp xếp theo sort tăng dần)',
+            ]
+        );
+        CRUD::addField(['label'=>"Hoạt Động","name"=>"status",]);
         /**
          * Fields can be defined using the fluent syntax or array syntax:
          * - CRUD::field('price')->type('number');

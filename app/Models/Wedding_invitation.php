@@ -23,7 +23,7 @@ class Wedding_invitation extends Model
     protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
-    protected $fillable = ['name', 'image','color','price','style'];
+    protected $fillable = ['name', 'image','color','price','style','sort','status'];
     protected $translatable = ['name', 'slug'];
 
     // protected $fillable = [];
