@@ -11,7 +11,7 @@ class Search extends Controller
 {
     //
     function index(Request $rq){
-        $db = new Model;
+        $db = Model::where("status",1);
         if(!empty($rq->slug)){
             $value = Str::slug($rq->slug, '-');
             $db = $db->where('slug', 'like', '%' . $value . '%');

@@ -13,7 +13,7 @@ class Product extends Controller
         $carts = $rq->session()->get("cart",[]);
         $detail = Model::join("style","wedding_invitation.style","=","style.id")->where("slug",$rq->slug)->select(DB::raw("wedding_invitation.*,style.content as style_name"))->first();
         $data['product'] = $detail;
-        $data['products'] = Model::where("style",$detail->style)->limit("9")->orderBy("id","desc")->get();
+        $data['products'] = Model::where("style",$detail->style)->where("status",1)->where("id","!=",$detail->id)->limit("9")->orderBy("id","desc")->get();
         $data['qty'] = 300;
         if(!empty($carts)){
             foreach($carts as $cart){

@@ -47,7 +47,6 @@ class Wedding_invitationCrudController extends CrudController
                 'type' => 'image',
                 'prefix' => 'img/product/',
             ],
-            
         );
         CRUD::addColumn(
             [

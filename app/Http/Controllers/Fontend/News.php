@@ -9,7 +9,7 @@ class News extends Controller
 {
     //
     function index(Request $rq){
-        $data['news']=Model::where("slug",$rq->slug)->first();
+        $data['news']=Model::where("slug",$rq->slug)->where("status",1)->first();
         return view("fontend.news",$data);
     }
 }
