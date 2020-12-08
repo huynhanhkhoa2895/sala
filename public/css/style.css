@@ -11,7 +11,11 @@ body,html{
 @font-face {
     font-family: 'mtd';
     src: url('MTD_Colatin.otf');
-  }
+}
+@font-face {
+    font-family: 'svn';
+    src: url('SVN-Beloved.otf');
+}
 .container-fluid{
     padding: 10px 0 0 0;
 }

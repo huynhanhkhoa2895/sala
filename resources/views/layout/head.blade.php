@@ -71,7 +71,7 @@
             </div>
             <div class="row" style="margin: 15px 0 15px 0;">
                 <div class="col-12">
-                    <h3>THIỆP CƯỚI ĐẸP - GIÁ RẺ - CHẤT LƯỢNG</h3>
+                    <h3 style="font-family: svn">THIỆP CƯỚI ĐẸP - GIÁ RẺ - CHẤT LƯỢNG</h3>
                 </div>
             </div>
         </div>
