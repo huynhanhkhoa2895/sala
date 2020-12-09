@@ -187,7 +187,8 @@
     clear: both;
 }
 .header-intro-title .header-intro-title-item{
-    width: max-content;
+    width: 50%;
+    text-align: center;
 }
 .header-intro-title .header-intro-title-item:first-child{
     float: left;

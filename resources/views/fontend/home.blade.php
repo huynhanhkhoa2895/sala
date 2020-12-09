@@ -19,7 +19,7 @@
                     <div class="carousel-inner">
                         @foreach ($banner as $k=>$item)
                             <div class="carousel-item {{$k == 0 ? "active" : ""}}">
-                                <img class="d-block w-100" src="{{asset("img/banner/".$item->img)}}" />
+                                <img class="d-block w-100" src="{{asset("img/banner/".$item->img)}}" alt="thiệp cưới sala" />
                             </div>
                         @endforeach
                     </div>
