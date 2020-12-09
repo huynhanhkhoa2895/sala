@@ -176,6 +176,25 @@
     font-style: italic;
     color: #ccc;
 }
+.header-intro-title{
+    font-family: svn;
+    text-shadow: 0 0 5px #c8ad5b;
+    margin-top: 10px;
+}
+.header-intro-title::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.header-intro-title .header-intro-title-item{
+    width: max-content;
+}
+.header-intro-title .header-intro-title-item:first-child{
+    float: left;
+}
+.header-intro-title .header-intro-title-item:last-child{
+    float: right;
+}
 @media only screen and (max-width: 1090px){
     .header .header-box-info .wrapper-icon{
         float: unset;
@@ -191,4 +210,10 @@
     }
 
 }
-
+@media only screen and (max-width: 520px){
+    .header-intro-title .header-intro-title-item{
+        text-align: center;
+        float: unset !important;
+        margin: auto;
+    }
+}

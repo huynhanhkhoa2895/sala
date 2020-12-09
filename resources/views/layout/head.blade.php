@@ -13,6 +13,16 @@
                         <div class="info">79 Đông Hưng Thuận 05, Phường Tân Hưng Thuận, Quận 12, Tp.HCM</div>
                         <div class="info"><a style="color: #fff" href="tel:0907000008">0907.000.008 (zalo)</a></div>
                     </div>
+                    <div class="header-intro-title">
+                        <div class="header-intro-title-item">
+                            <h4>Chất liệu giấy ngoại nhập</h4>
+                            <h4>Đặt hàng Online không cần cọc</h4>
+                        </div>
+                        <div class="header-intro-title-item">
+                            <h4>Demo cho khách xem trước</h4>
+                            <h4>Miễn phí ship đơn trên 500 bộ</h4>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-5">
                     <div class="header-box-info">
@@ -67,11 +77,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row" style="margin: 15px 0 15px 0;">
-                <div class="col-12">
-                    <h3 style="font-family: svn">THIỆP CƯỚI ĐẸP - GIÁ RẺ - CHẤT LƯỢNG</h3>
                 </div>
             </div>
         </div>
