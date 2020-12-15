@@ -38,6 +38,10 @@
                         <td><a href="{{url("admin/wedding_invitation/".$info->product."/show")}}">{{$info->name}}</a></td>
                     </tr>
                     <tr>
+                        <td>Số lượng Thiệp</td>
+                        <td>{{$info->qty}}</td>
+                    </tr>
+                    <tr>
                         <td>Tiêu đề</td>
                         <td>{{$info->title}}</td>
                     </tr>

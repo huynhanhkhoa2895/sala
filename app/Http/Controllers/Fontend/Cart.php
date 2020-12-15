@@ -140,6 +140,7 @@ class Cart extends Controller
         foreach($data['product'] as $product){
             $wedding->product = $product->id;
         }
+        $wedding->qty = $totalQty;
         $wedding->save();
         $request->session()->forget('cart');
         return redirect(url("/"))->with("msg","Bạn đã đặt thiệp thành công, chúng tôi sẽ sớm liên hệ với bạn");
