@@ -41,7 +41,10 @@ $(document).ready(function () {
             document.location.href = window.location.origin+"/loai-thiep/"+$(this).val(); 
         }
     })
-
+    $("#btn-search").on("click",function(){
+        let val = $(this).closest(".input-group").find("input").val()
+        searchKey(val)
+    })
 })
 function coverQueryParamToJson() {
     let search = location.search.substring(1);

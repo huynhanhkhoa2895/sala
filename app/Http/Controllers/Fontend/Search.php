@@ -14,7 +14,17 @@ class Search extends Controller
         $db = Model::where("status",1);
         if(!empty($rq->slug)){
             $value = Str::slug($rq->slug, '-');
-            $db = $db->where('slug', 'like', '%' . $value . '%');
+            $db = $db->where('slug', 'like', '%' . $value . '%')
+                    ->orWhere('slug',$value)
+                    ->orWhere('slug','like', '%' . $rq->slug . '%')
+                    ->orWhere('slug',$rq->slug)
+                    ->orWhere('name','like', '%' . $rq->slug . '%')
+                    ->orWhere('name',$rq->slug)
+                    ->orWhere('name','like', '%' . $value . '%')
+                    ->orWhere('name',$value);
+            // foreach(explode("-",$rq->slug) as $char){
+            //     $db = $db->orWhere('name','like', '%' . $char . '%');
+            // }
         }
         if(!empty($rq->color)){
             $db = $db->where("color",$rq->color);

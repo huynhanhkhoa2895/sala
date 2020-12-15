@@ -69,7 +69,7 @@
                                         <div class="input-group mb-3">
                                             <input type="text" class="form-control sala-input" placeholder="Tìm kiếm" id="search">
                                             <div class="input-group-append">
-                                                <span class="input-group-text bg-main" id="basic-addon2"><span class="fas fa-search color-w"></span></span>
+                                                <span class="input-group-text bg-main" id="btn-search"><span class="fas fa-search color-w"></span></span>
                                             </div>
                                         </div>
                                     </div>
