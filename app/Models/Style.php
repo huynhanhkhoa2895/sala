@@ -21,7 +21,7 @@ class Style extends Model
     // public $timestamps = false;
     protected $guarded = ['id'];
     public $identifiableAttribute = 'content';
-    protected $fillable = ['content', 'img'];
+    protected $fillable = ['content', 'img','parent'];
     // protected $fillable = [];
     // protected $hidden = [];
     // protected $dates = [];
