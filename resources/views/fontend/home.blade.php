@@ -122,7 +122,7 @@
                     <p>1. Giá áp dụng in 300 thiệp</p>
                     <p>2. Giá chưa bao gồm in bản đồ.</p>
                     <p>3. SL dưới 300 thiệp phụ thu 50k; Dưới 200 thiệp phụ thu 100k.</p>
-                    <p><a href="tel:0907000008">0907.000.008</a></p>
+                    <p><a href="tel:0907000008">0907.000.008</a> (Zalo)</p>
                 </div>
                 <div class="contact text-center" id="contact">
                     <div>Nhập email hoặc số điện thoại để được tư vấn ngay</div>

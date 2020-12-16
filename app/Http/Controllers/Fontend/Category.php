@@ -11,7 +11,11 @@ class Category extends Controller
     //
     public function index(Request $rq){
         $id = Style::where("id",$rq->id)->first()->id;
-        $db = Wedding_invitation::where("style",$id)->where("status",1);
+        $parents = [];
+        foreach(Style::where("parent",$rq->id)->get() as $it){
+            array_push($parents,$it->id);
+        }
+        $db = Wedding_invitation::where("style",$id)->orWhereIn("style",$parents)->where("status",1);
         if(!empty($rq->color)){
             $db->where("color",$rq->color);
         }
