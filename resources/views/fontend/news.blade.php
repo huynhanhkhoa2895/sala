@@ -4,6 +4,13 @@
 @endsection
 @section('content')
     <div class="news-container">
+        @if(empty($news))
+            <div class="row" style="margin-top: 20px">
+                <div class="col-12">
+                    <h1 class="color text-center">Tin tức tạm thời không tồn tại hoặc quản trị viên đã xóa</h1>
+                </div>
+            </div>
+        @else
         <div class="row" style="margin-top: 20px">
             <div class="col-12">
                 <h3 class="color text-center">{{$news->title}}</h3>
@@ -22,6 +29,7 @@
                     {!!$news->content!!}
                 </div>
             </div>
-        <div class="row">
+        </div>
+        @endif
     </div>
 @endsection
