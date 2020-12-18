@@ -184,6 +184,9 @@ button.btn-payment{
         padding: 0;
         margin: auto;
     }
+    .product-list-kind .product-list-kind-item{
+        padding: 10px;
+    }
     .prodict-list-item .prodict-list-item-box .box-img img{
         width: 100%;
     }
