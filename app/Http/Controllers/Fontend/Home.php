@@ -18,7 +18,7 @@ class Home extends Controller
         $data['color'] = Color::all();
         $data['banner'] = Banner::where("status",1)->get();
         $data['style'] = Style::all();
-        $data['news'] = News::all();
+        $data['news'] = News::where("status",1)->get();
         $data['product']=Wedding_invitation::where("sort",">",0)->where("status",1)->orderBy("sort","asc")->get();
         if(count($data['product']) === 0){
             $data['product']=Wedding_invitation::where("status",1)->limit(15)->orderBy("id","desc")->get();
