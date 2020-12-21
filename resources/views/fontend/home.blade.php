@@ -134,7 +134,8 @@
                             </div>
                         </div>
                         <div style="display : none" class="send-success-message">
-                            <span>Chúng tôi sẽ sẽ liên lạc sớm với bạn</span>
+                            <span>Quý khách vui lòng nhắn trực tiếp vào số điên thoại 0907000008 (Zalo). 
+                                Sala Wedding xin cảm ơn quý khách!</span>
                         </div>
                     </div>
                 </div>
