@@ -33,8 +33,8 @@ class CreateWeddingInfoTable extends Migration
             $table->string("place_mdate");
             $table->enum("place",["Nhà Hàng","Tư Gia"])->default("Nhà Hàng");
             $table->string("place_address");
-            $table->foreign('order')->references('id')->on('order');
-            $table->foreign('product')->references('id')->on('wedding_invitation');
+            $table->foreign('order')->references('id')->on('order')->onDelete("cascade");
+            $table->foreign('product')->references('id')->on('wedding_invitation')->onDelete("cascade");
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });
