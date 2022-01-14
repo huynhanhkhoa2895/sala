@@ -38,7 +38,7 @@
                                 </div>
                             </div>
                             <div class="product-cart">
-                                <a href="javascript:void(0)" onclick="addToCart({{$product->id}})"><span class="fas fa-shopping-cart"></span>Mua hàng</a>
+                                <a href="javascript:void(0)" class="btn-checkout" onclick="addToCart({{$product->id}})"><span class="fas fa-shopping-cart"></span>Mua hàng</a>
                                 <a href="{{url("thiep/so-sanh/".$product->slug)}}" class="btn btn-link pdl0 font-weight-bold"><span class="fas fa-sync"></span> So Sánh Với Sản Phẩm Khác</a>
                             </div>
                             <div class="product-contact">

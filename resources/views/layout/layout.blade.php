@@ -16,11 +16,21 @@
     <link href="{{asset("css/header.css")}}" rel="stylesheet" />
     <link href="{{asset("css/footer.css")}}" rel="stylesheet" />
     <link href="{{asset("css/home.css")}}" rel="stylesheet" />
-    
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T22624W');</script>
+<!-- End Google Tag Manager -->
     @include("layout.css")
     @yield('css')
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T22624W"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
     <section class="container-fluid">
         <header>
             @include('layout.head')
@@ -40,12 +50,6 @@
     <div class="background-icon">
         <div class="background-icon-item" onclick="scrollToTop()">
             <span class="fas fa-arrow-up fa-2x"></span>
-        </div>
-        <div class="background-icon-item" onclick="toogleMusic()">
-            <span class="fas fa-volume-up fa-2x"></span>
-            <audio id="music" controls autoplay style="display: none">
-                <source src="{{asset("music.mp3")}}" type="audio/mpeg">
-            </audio>
         </div>
     </div>
     <div class="background-messenger">
